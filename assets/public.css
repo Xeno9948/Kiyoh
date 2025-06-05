@@ -1,3 +1,5 @@
+/* ==== RESET STYLES ==== */
+
 body,
 html {
   overflow-x: hidden
@@ -17,9 +19,14 @@ img {
   border: none
 }
 
+/* ==== FONTS STYLES ==== */
+
 @font-face {
   font-family: 'FontAwesome';
   src: url('assets/fonts/fontawesome-webfont.eot');
+
+  /* ==== TYPOGRAPHY STYLES ==== */
+
   src: url('assets/fonts/fontawesome-webfont.eot?#iefix') format('embedded-opentype'),
     url('assets/fonts/fontawesome-webfont.woff2') format('woff2'),
     url('assets/fonts/fontawesome-webfont.woff') format('woff'),
@@ -28,6 +35,8 @@ img {
   font-weight: normal;
   font-style: normal;
 }
+
+/* ==== LAYOUT STYLES ==== */
 
 @font-face {
   font-family: Gotham;
@@ -518,8 +527,8 @@ ul.real-list {
   width: 4000px;
   margin-left: -2000px;
   margin-right: -2000px;
-  background: #ECECEC;
-  color: #464343;
+  background: #ffffff;
+  color: #ffffff;
   content: '';
   top: 0;
   bottom: 0;
@@ -3992,7 +4001,7 @@ table th.full {
   -webkit-box-align: stretch;
   -ms-flex-align: stretch;
   align-items: stretch;
-  color: #ffffff
+  color: #464343
 }
 
 @media only screen and (min-width:768px) {
@@ -4009,13 +4018,68 @@ table th.full {
 
 .review-summary .overall-rating,
 .review-summary .ratings-per-division {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  -webkit-box-orient: vertical;
-  border: 1px solid #ccc;
-  background: #fff
+  border: none;
+  background: none;
+  border-radius: 0;
+  box-shadow: none;
 }
 
+.review-summary {
+  border: 1px solid #ccc;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 15px;
+  box-shadow: 0 15px 12px rgba(0,0,0,0.30);
+  overflow: hidden;
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  border: 1px solid rgba(200, 200, 200, 0.3);
+}
+
+.company-summary {
+  border: 1px solid #ccc;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 15px;
+  box-shadow: 0 15px 12px rgba(0,0,0,0.30);
+  overflow: hidden;
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  border: 1px solid rgba(200, 200, 200, 0.3);
+}
+@media only screen and (min-width: 768px) and (orientation: landscape) {
+  .company-summary {
+    width: 30vw;
+    min-width: 300px;
+    max-width: 100%;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .company-summary,
+  .review-summary {
+    display: inline-block;
+    vertical-align: top;
+    margin: 2em;
+  }
+  .public-page .splitted-view {
+    display: flex;
+    flex-direction: row;
+    gap: 2em;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .public-page .splitted-view > .company-summary,
+  .public-page .splitted-view > .review-summary {
+    margin: 0;
+  }
+}
+@media only screen and (max-width: 1023px) {
+  .company-summary,
+  .review-summary {
+    display: block;
+    margin: 1.5em auto;
+    width: 100%;
+    max-width: 100%;
+  }
+}
 .review-summary .overall-rating {
   display: flex;
   -webkit-box-direction: normal;
@@ -4040,7 +4104,7 @@ table th.full {
 }
 
 .review-summary .overall-rating .rating-stars {
-  margin: 1em 0
+  margin: 2% 0
 }
 
 .review-summary .overall-rating .rating-stars [class^=icon-star] {
@@ -6484,8 +6548,10 @@ html.widget-document body.kv-widget-body.WIDE .kv-widget .widget-part .review-co
 /*!
  *  Font Awesome 4.6.1 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
- */
-@font-face {
+
+/* ==== COMPONENTS STYLES ==== */
+
+*/@font-face {
   font-family: FontAwesome;
   src: url(/assets/fonts/font-awesome/fontawesome-webfont.eot?v=4.6.1);
   src: url(/assets/fonts/font-awesome/fontawesome-webfont.eot?#iefix&v=4.6.1) format('embedded-opentype'), url(/assets/fonts/font-awesome/fontawesome-webfont.woff2?v=4.6.1) format('woff2'), url(/assets/fonts/font-awesome/fontawesome-webfont.woff?v=4.6.1) format('woff'), url(/assets/fonts/font-awesome/fontawesome-webfont.ttf?v=4.6.1) format('truetype'), url(/assets/fonts/font-awesome/fontawesome-webfont.svg?v=4.6.1#fontawesomeregular) format('svg');
@@ -6563,8 +6629,10 @@ html.widget-document body.kv-widget-body.WIDE .kv-widget .widget-part .review-co
 /*!
  *  Font Awesome 4.6.1 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
- */
-.icon-glass:before {
+
+/* ==== RESPONSIVE STYLES ==== */
+
+*/.icon-glass:before {
   content: "\f000"
 }
 
