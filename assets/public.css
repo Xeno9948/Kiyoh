@@ -3418,7 +3418,9 @@ review-filters .filters {
   width: 10em;
   height: 10em;
   border-radius: 50%;
-  background: url('./assets/kv_shape.png');
+  z-index: 2;
+  text-align: center;
+  color: #464343;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
