@@ -4038,7 +4038,7 @@ table th.full {
 }
 
 .company-summary {
-  margin: 0 auto;
+  margin: 0 1rem;
   padding: 0 1rem;
   border: 1px solid #ccc;
   background: rgba(255, 255, 255, 0.6);
@@ -4051,7 +4051,7 @@ table th.full {
 }
 @media only screen and (min-width: 768px) and (orientation: landscape) {
   .company-summary {
-  margin: 0 auto;
+  margin: 0 1rem;
   width: 30vw;
   min-width: 300px;
   max-width: 100%;
@@ -9461,7 +9461,7 @@ application-header .divider .wrapper .detail {
 
 .summary-flex .company-summary {
   margin: 0 auto;
-  flex: 0 0 35%;
+  margin: 0 1rem;
 }
 
 @media (max-width: 767px) {
@@ -9471,7 +9471,7 @@ application-header .divider .wrapper .detail {
 
   .summary-flex .review-summary,
   .summary-flex .company-summary {
-  margin: 0 auto;
+  margin: 0 1rem;
     flex-basis: 100%;
   }
 }
