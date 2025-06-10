@@ -3722,22 +3722,22 @@ table th.full {
   .facebook-wrapper .review-summary .ratings-per-division ul li .rating {
     width: 10em
   }
+}
 
-  .review>.review-content {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-flow: row nowrap;
-    flex-flow: row nowrap
-  }
+.review> .review-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
 }
 
 .review>.review-content>.right {
-  -webkit-box-flex: 1;
-  -ms-flex: 1 1 0px;
-  flex: 1 1 0px;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 70%;
+  flex: 0 0 70%;
   min-width: 0;
   overflow: hidden;
   clear: left
@@ -4041,7 +4041,8 @@ table th.full {
 }
 
 .company-summary {
-  margin: 0 1rem;
+  margin: 0 auto;
+  padding: 0 1rem;
   border: 1px solid #ccc;
   background: rgba(255, 255, 255, 0.6);
   border-radius: 15px;
@@ -4053,10 +4054,10 @@ table th.full {
 }
 @media only screen and (min-width: 768px) and (orientation: landscape) {
   .company-summary {
-  margin: 0 1rem;
-    width: 30vw;
-    min-width: 300px;
-    max-width: 100%;
+  margin: 0 auto;
+  width: 30vw;
+  min-width: 300px;
+  max-width: 100%;
   }
 }
 @media only screen and (min-width: 1024px) {
@@ -6429,6 +6430,11 @@ html.widget-document body.kv-widget-body.WIDE .kv-widget .widget-part .review-co
   font-size: .875em;
   white-space: pre-line;
   margin: 1em 0
+}
+.about-review summary {
+  cursor: pointer;
+  font-weight: 700;
+  margin: 1em 0;
 }
 
 .print .kv-widget {
@@ -9454,7 +9460,7 @@ application-header .divider .wrapper .detail {
 }
 
 .summary-flex .company-summary {
-  margin: 0 1rem;
+  margin: 0 auto;
   flex: 0 0 35%;
 }
 
@@ -9465,7 +9471,7 @@ application-header .divider .wrapper .detail {
 
   .summary-flex .review-summary,
   .summary-flex .company-summary {
-  margin: 0 1rem;
+  margin: 0 auto;
     flex-basis: 100%;
   }
 }
@@ -9514,9 +9520,9 @@ application-header .divider .wrapper .detail {
   align-items: center;
   gap: 0.5em;
 }
-.review > .right {
-  -webkit-box-flex: 1;
-  -ms-flex: 1 1 0px;
+.review > .review-content > .right {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 70%;
   flex: 0 0 70%;
   min-width: 0;
   overflow: hidden;
@@ -9524,32 +9530,32 @@ application-header .divider .wrapper .detail {
 }
 
 @media only screen and (max-width:1023px) {
-  .review > .right > .overall-rating-stars { display: none; }
-  .review > .right > .rating-description { margin-top: 0; }
+  .review > .review-content > .right > .overall-rating-stars { display: none; }
+  .review > .review-content > .right > .rating-description { margin-top: 0; }
 }
 
 @media (max-width:600px) {
-  .review > .right .question-wrapper,
-  .review > .right group-or-custom-content-line {
+  .review > .review-content > .right .question-wrapper,
+  .review > .review-content > .right group-or-custom-content-line {
     display: block;
     margin-bottom: 1em;
   }
-  .review > .right .question-wrapper>span,
-  .review > .right group-or-custom-content-line>span {
+  .review > .review-content > .right .question-wrapper>span,
+  .review > .review-content > .right group-or-custom-content-line>span {
     display: block;
   }
-  .review > .right .question-wrapper>span:first-child,
-  .review > .right group-or-custom-content-line>span:first-child {
+  .review > .review-content > .right .question-wrapper>span:first-child,
+  .review > .review-content > .right group-or-custom-content-line>span:first-child {
     margin-bottom: 5px;
   }
 }
 
-.review > .right .popup-container .link {
+.review > .review-content > .right .popup-container .link {
   font-style: italic;
   font-size: .875rem;
 }
 
-.review > .left {
+.review > .review-content > .left {
   margin-right: 2em;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -9563,17 +9569,17 @@ application-header .divider .wrapper .detail {
   align-items: center;
 }
 
-.review > .left > * {
+.review > .review-content > .left > * {
   -webkit-box-flex: 0;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
 }
 
-.review > .left > .overall-rating-stars { display: none; }
+.review > .review-content > .left > .overall-rating-stars { display: none; }
 
 @media only screen and (max-width:1023px) {
-  .review > .left { float: left; margin-bottom: 1.5em; }
-  .review > .left > .overall-rating-stars { display: block; }
+  .review > .review-content > .left { float: left; margin-bottom: 1.5em; }
+  .review > .review-content > .left > .overall-rating-stars { display: block; }
 }
 .vg-rating-number {
   background: url('/assets/KV_shape.png') center center no-repeat;
