@@ -9456,8 +9456,8 @@ application-header .divider .wrapper .detail {
 
 /* Square map styling */
 .company-summary .map-square {
-  width: 15em;
-  height: 15em;
+  width: 18em;
+  height: 18em;
   max-width: 100%;
   border-radius: 0.75rem;
   overflow: hidden;
