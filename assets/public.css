@@ -9648,3 +9648,26 @@ application-header .divider .wrapper .detail {
     flex-basis: 100%;
   }
 }
+.orange-button {
+  background: linear-gradient(145deg, #ff7a00, #ff9900);
+  border: none;
+  border-radius: 12px;
+  color: white;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  box-shadow: 0 4px 8px rgba(255, 122, 0, 0.3);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.orange-button:hover {
+  box-shadow: 0 6px 12px rgba(255, 122, 0, 0.4);
+  transform: translateY(-1px);
+}
+
+.orange-button:active {
+  transform: scale(0.98);
+}
