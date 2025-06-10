@@ -9435,9 +9435,12 @@ application-header .divider .wrapper .detail {
   padding: 0 1rem;
 }
 
-.summary-flex .review-summary,
+.summary-flex .review-summary {
+  flex: 0 0 65%;
+}
+
 .summary-flex .company-summary {
-  flex: 1;
+  flex: 0 0 35%;
 }
 
 @media (max-width: 767px) {
@@ -9469,12 +9472,26 @@ application-header .divider .wrapper .detail {
 
 /* Styling for the Bedrijfsoverzicht heading */
 .company-summary .review-title {
-  font-size: 1.5em;
+  font-size: 2em;
   font-weight: 700;
   margin-bottom: 0.5em;
+  margin-top: 2rem;
 }
 
 /* Even spacing for contact buttons */
+.company-summary .contact-flex {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+@media (max-width: 767px) {
+  .company-summary .contact-flex {
+    flex-direction: column;
+  }
+}
+
 .company-summary .contact-info .contact-row {
   margin-bottom: 0.5em;
   display: flex;
