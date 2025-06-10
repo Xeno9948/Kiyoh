@@ -3415,10 +3415,10 @@ review-filters .filters {
 }
 
 .average-rating-number-container {
-  width: 10em;
-  height: 10em;
+  width: 15rem;
+  height: 15rem;
   position: relative;
-  background: url('./assets/kv_shape.png');
+  background: url('socre1.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
