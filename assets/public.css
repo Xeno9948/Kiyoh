@@ -9428,11 +9428,10 @@ application-header .divider .wrapper .detail {
 /* Full-width flex container for summaries */
 .summary-flex {
   display: flex;
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
-  margin-right: calc(50% - 50vw);
+  width: 100%;
   gap: 1rem;
   padding: 0 1rem;
+  box-sizing: border-box;
 }
 
 .summary-flex .review-summary {
@@ -9461,7 +9460,7 @@ application-header .divider .wrapper .detail {
   max-width: 100%;
   border-radius: 0.75rem;
   overflow: hidden;
-  margin: 0 auto 1em;
+  margin: 1.5rem auto 1em;
 }
 
 .company-summary .map-square iframe {
