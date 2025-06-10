@@ -9648,14 +9648,14 @@ application-header .divider .wrapper .detail {
   }
 }
 .orange-button {
-  background: linear-gradient(145deg, #ff7a00, #ff9900);
-  border: none;
+  background: rgba(255, 255, 255, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.6);
   border-radius: 12px;
-  color: white;
+  color: #DD6826;
   padding: 12px 24px;
   font-size: 16px;
   font-weight: 600;
-  box-shadow: 0 4px 8px rgba(255, 122, 0, 0.3);
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.3);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   transition: all 0.2s ease-in-out;
@@ -9663,7 +9663,7 @@ application-header .divider .wrapper .detail {
 }
 
 .orange-button:hover {
-  box-shadow: 0 6px 12px rgba(255, 122, 0, 0.4);
+  box-shadow: 0 6px 12px rgba(255, 255, 255, 0.4);
   transform: translateY(-1px);
 }
 
@@ -9685,7 +9685,7 @@ application-header .divider .wrapper .detail {
 .reviews-flex .reviewlist {
   flex: 0 0 70%;
 }
-.reviews-flex .right {
+.reviews-flex .faq {
   flex: 0 0 30%;
 }
 @media (max-width: 767px) {
@@ -9693,7 +9693,7 @@ application-header .divider .wrapper .detail {
     flex-direction: column;
   }
   .reviews-flex .reviewlist,
-  .reviews-flex .right {
+  .reviews-flex .faq {
     flex-basis: 100%;
   }
 }
