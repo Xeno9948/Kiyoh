@@ -6104,7 +6104,7 @@ html.widget-document body.kv-widget-body .kv-widget-wrapper {
 
 html.widget-document body.kv-widget-body .default-widget-rating-number {
   display: block;
-  background: url(/assets/kiyoh/images/kv_shape.svg) 50% 50% no-repeat;
+  background: url(/assets/kiyoh/images/kv_shape.png) 50% 50% no-repeat;
   background-size: cover;
   width: 10em;
   height: 10em;
