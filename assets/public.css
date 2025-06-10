@@ -3415,13 +3415,21 @@ review-filters .filters {
 }
 
 .average-rating-number-container {
-  display: block;
-  background: url(/assets/kiyoh/images/kv_shape.png) 50% 50% no-repeat;
-  background-size: cover;
   width: 10em;
   height: 10em;
+  border-radius: 50%;
+  background: conic-gradient(
+    red,
+    orange,
+    yellow,
+    lime,
+    green,
+    cyan,
+    blue,
+    purple,
+    red
+  );
   position: relative;
-  color: #464343
 }
 
 .average-rating-number-container>.rating {
@@ -3444,16 +3452,16 @@ review-filters .filters {
   font-family: var(--font)
 }
 
-.average-rating-number-container:before {
+.average-rating-number-container::before {
   content: '';
   position: absolute;
-  top: 5%;
-  left: 5%;
-  width: 90%;
-  height: 90%;
-  background: #fff;
-  z-index: -1;
-  border-radius: 50%
+  top: 25%;
+  left: 25%;
+  width: 50%;
+  height: 50%;
+  background: white;
+  border-radius: 50%;
+  z-index: 1;
 }
 
 .public-filter .rating-stars [class^=icon-star]:not(.icon-star-o) {
@@ -9616,4 +9624,27 @@ application-header .divider .wrapper .detail {
 .vg-rating-number {
   background: url('/assets/KV_shape.png') center center no-repeat;
   background-size: cover;
+}
+
+.left-right {
+  display: flex;
+  gap: 1rem;
+}
+
+.left-right > .left {
+  flex: 0 0 70%;
+}
+
+.left-right > .right {
+  flex: 0 0 30%;
+}
+
+@media only screen and (max-width:1023px) {
+  .left-right {
+    flex-direction: column;
+  }
+  .left-right > .left,
+  .left-right > .right {
+    flex-basis: 100%;
+  }
 }
