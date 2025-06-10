@@ -3417,12 +3417,12 @@ review-filters .filters {
 .average-rating-number-container {
   width: 10em;
   height: 10em;
-  border-radius: 50%;
+  position: relative;
   background: url('./assets/kv_shape.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  position: relative;
+  border-radius: 50%;
 }
 
 .average-rating-number-container>.rating {
