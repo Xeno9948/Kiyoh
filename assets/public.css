@@ -5702,7 +5702,15 @@ table.lined-table checkbox.slider {
 }
 
 .review-list .review {
-  margin: 2em 0
+  margin: 2em 0;
+  padding: 1.5em;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(200, 200, 200, 0.3);
+  box-shadow: 0 15px 12px rgba(0,0,0,0.30);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  overflow: hidden;
 }
 
 .review-list .review:first-child {
