@@ -9472,6 +9472,7 @@ application-header .divider .wrapper .detail {
 .summary-flex {
   display: flex;
   width: 100%;
+  align-items: flex-start;
   gap: 1rem;
   padding: 0 1rem;
   box-sizing: border-box;
@@ -9484,6 +9485,17 @@ application-header .divider .wrapper .detail {
 .summary-flex .company-summary {
   margin: 0 auto;
   flex: 0 0 35%;
+}
+
+
+.faq {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(200, 200, 200, 0.3);
+  border-radius: 15px;
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
 }
 
 @media (max-width: 767px) {
@@ -9642,14 +9654,14 @@ application-header .divider .wrapper .detail {
   }
 }
 .orange-button {
-  background: linear-gradient(145deg, #ff7a00, #ff9900);
-  border: none;
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.8);
   border-radius: 12px;
-  color: white;
+  color: #DD6826;
   padding: 12px 24px;
   font-size: 16px;
   font-weight: 600;
-  box-shadow: 0 4px 8px rgba(255, 122, 0, 0.3);
+  box-shadow: 0 4px 8px rgba(221, 104, 38, 0.25);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   transition: all 0.2s ease-in-out;
@@ -9657,7 +9669,7 @@ application-header .divider .wrapper .detail {
 }
 
 .orange-button:hover {
-  box-shadow: 0 6px 12px rgba(255, 122, 0, 0.4);
+  box-shadow: 0 6px 12px rgba(221, 104, 38, 0.35);
   transform: translateY(-1px);
 }
 
