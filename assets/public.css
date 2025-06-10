@@ -9437,7 +9437,7 @@ application-header .divider .wrapper .detail {
 
 .summary-flex .review-summary,
 .summary-flex .company-summary {
-  flex: 0 0 50%;
+  flex: 1;
 }
 
 @media (max-width: 767px) {
