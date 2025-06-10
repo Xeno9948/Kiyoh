@@ -9472,6 +9472,7 @@ application-header .divider .wrapper .detail {
 .summary-flex {
   display: flex;
   width: 100%;
+  align-items: flex-start;
   gap: 1rem;
   padding: 0 1rem;
   box-sizing: border-box;
@@ -9484,6 +9485,10 @@ application-header .divider .wrapper .detail {
 .summary-flex .company-summary {
   margin: 0 auto;
   flex: 0 0 35%;
+}
+
+.summary-flex .faq {
+  margin-top: 1rem;
 }
 
 @media (max-width: 767px) {
