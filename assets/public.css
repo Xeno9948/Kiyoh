@@ -3418,9 +3418,18 @@ review-filters .filters {
   width: 10em;
   height: 10em;
   border-radius: 50%;
-  background: url("assets/score.png") center center/cover no-repeat;
+  background: url('/assets/kv_shape.png') center center no-repeat;
+  background-size: cover;
 .average-rating-number-container::before {
-  content: none;
+  content: '';
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  width: 50%;
+  height: 50%;
+  background: white;
+  border-radius: 50%;
+  z-index: 1;
 }
 
 .public-filter .rating-stars [class^=icon-star]:not(.icon-star-o) {
@@ -9584,7 +9593,7 @@ application-header .divider .wrapper .detail {
   .review > .review-content > .left > .overall-rating-stars { display: block; }
 }
 .vg-rating-number {
-  background: url('/assets/KV_shape.png') center center no-repeat;
+  background: url('/assets/kv_shape.png') center center no-repeat;
   background-size: cover;
 }
 
