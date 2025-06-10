@@ -9424,3 +9424,19 @@ application-header .divider .wrapper .detail {
   height: 100%;
   background: url(/assets/kiyoh/images/divider_bar.svg) repeat-y
 }
+
+/* Full-width flex container for summaries */
+.summary-flex {
+  display: flex;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+}
+
+.summary-flex .review-summary {
+  flex: 0 0 65%;
+}
+
+.summary-flex .company-summary {
+  flex: 0 0 35%;
+}
