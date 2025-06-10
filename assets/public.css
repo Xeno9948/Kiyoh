@@ -3418,17 +3418,10 @@ review-filters .filters {
   width: 10em;
   height: 10em;
   border-radius: 50%;
-  background: conic-gradient(
-    red,
-    orange,
-    yellow,
-    lime,
-    green,
-    cyan,
-    blue,
-    purple,
-    red
-  );
+  background: url('./assets/kv_shape.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   position: relative;
 }
 
