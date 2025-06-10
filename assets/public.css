@@ -9431,12 +9431,22 @@ application-header .divider .wrapper .detail {
   width: 100vw;
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
+  gap: 1rem;
+  padding: 0 1rem;
 }
 
-.summary-flex .review-summary {
-  flex: 0 0 65%;
-}
-
+.summary-flex .review-summary,
 .summary-flex .company-summary {
-  flex: 0 0 35%;
+  flex: 0 0 50%;
+}
+
+@media (max-width: 767px) {
+  .summary-flex {
+    flex-direction: column;
+  }
+
+  .summary-flex .review-summary,
+  .summary-flex .company-summary {
+    flex-basis: 100%;
+  }
 }
