@@ -1,0 +1,20 @@
+/* Custom styles extracted from HTML */
+.tcxspan {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.star-color-ffb612 {
+  color: #ffb612;
+}
+.star-color-ffd834 {
+  color: #ffd834;
+}
+.star-color-ffba16 {
+  color: #ffba16;
+}
+.star-color-ffbe1a {
+  color: #ffbe1a;
+}
+.company-link-font16 {
+  font-size: 16px;
+}
