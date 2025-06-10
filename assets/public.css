@@ -3419,26 +3419,8 @@ review-filters .filters {
   height: 10em;
   border-radius: 50%;
   background: url("assets/score.png") center center/cover no-repeat;
-  position: absolute;
-  font-weight: 500;
-  font-family: Gotham, Arial;
-  font-size: 3.2em;
-  top: 50%;
-  left: 0;
-  width: 100%;
-  margin: -.55em 0 0 -.04em;
-  letter-spacing: -.05em;
-  content: none;
 .average-rating-number-container::before {
-  content: '';
-  position: absolute;
-  top: 25%;
-  left: 25%;
-  width: 50%;
-  height: 50%;
-  background: white;
-  border-radius: 50%;
-  z-index: 1;
+  content: none;
 }
 
 .public-filter .rating-stars [class^=icon-star]:not(.icon-star-o) {
