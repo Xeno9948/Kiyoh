@@ -3736,8 +3736,8 @@ table th.full {
 
 .review>.review-content>.right {
   -webkit-box-flex: 0;
-  -ms-flex: 0 0 20%;
-  flex: 0 0 20%;
+  -ms-flex: 0 0 70%;
+  flex: 0 0 70%;
   min-width: 0;
   overflow: hidden;
   clear: left
@@ -3790,8 +3790,8 @@ table th.full {
   -ms-flex-align: center;
   align-items: center;
   -webkit-box-flex: 0;
-  -ms-flex: 0 0 80%;
-  flex: 0 0 80%
+  -ms-flex: 0 0 30%;
+  flex: 0 0 30%
 }
 
 .review>.review-content>.left>* {
@@ -3805,13 +3805,23 @@ table th.full {
 }
 
 @media only screen and (max-width:1023px) {
-  .review>.review-content>.left {
-    float: left;
-    margin-bottom: 1.5em
+  .review > .review-content {
+    flex-direction: column;
   }
 
-  .review>.review-content>.left>.overall-rating-stars {
-    display: block
+  .review > .review-content > .left,
+  .review > .review-content > .right {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+
+  .review > .review-content > .left {
+    margin-right: 0;
+    margin-bottom: 1.5em;
+  }
+
+  .review > .review-content > .left > .overall-rating-stars {
+    display: block;
   }
 }
 
@@ -9525,8 +9535,8 @@ application-header .divider .wrapper .detail {
 }
 .review > .review-content > .right {
   -webkit-box-flex: 0;
-  -ms-flex: 0 0 20%;
-  flex: 0 0 20%;
+  -ms-flex: 0 0 70%;
+  flex: 0 0 70%;
   min-width: 0;
   overflow: hidden;
   clear: left;
@@ -9571,8 +9581,8 @@ application-header .divider .wrapper .detail {
   -ms-flex-align: center;
   align-items: center;
   -webkit-box-flex: 0;
-  -ms-flex: 0 0 80%;
-  flex: 0 0 80%;
+  -ms-flex: 0 0 30%;
+  flex: 0 0 30%;
 }
 
 .review > .review-content > .left > * {
@@ -9584,7 +9594,18 @@ application-header .divider .wrapper .detail {
 .review > .review-content > .left > .overall-rating-stars { display: none; }
 
 @media only screen and (max-width:1023px) {
-  .review > .review-content > .left { float: left; margin-bottom: 1.5em; }
+  .review > .review-content {
+    flex-direction: column;
+  }
+  .review > .review-content > .left,
+  .review > .review-content > .right {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+  .review > .review-content > .left {
+    margin-right: 0;
+    margin-bottom: 1.5em;
+  }
   .review > .review-content > .left > .overall-rating-stars { display: block; }
 }
 .vg-rating-number {
