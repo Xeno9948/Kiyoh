@@ -9633,3 +9633,10 @@ application-header .divider .wrapper .detail {
 .orange-button:active {
   transform: scale(0.98);
 }
+
+.faq {
+  margin-top: 1em;
+}
+.faq .about-review {
+  margin-bottom: 1em;
+}
