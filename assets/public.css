@@ -9424,3 +9424,53 @@ application-header .divider .wrapper .detail {
   height: 100%;
   background: url(/assets/kiyoh/images/divider_bar.svg) repeat-y
 }
+
+/* Full-width flex container for summaries */
+.summary-flex {
+  display: flex;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  gap: 1rem;
+  padding: 0 1rem;
+}
+
+.summary-flex .review-summary,
+.summary-flex .company-summary {
+  flex: 1;
+}
+
+@media (max-width: 767px) {
+  .summary-flex {
+    flex-direction: column;
+  }
+
+  .summary-flex .review-summary,
+  .summary-flex .company-summary {
+    flex-basis: 100%;
+  }
+}
+
+/* Square map styling */
+.company-summary .map-square {
+  width: 10em;
+  height: 10em;
+  max-width: 100%;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  margin: 0 auto 1em;
+}
+
+.company-summary .map-square iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Even spacing for contact buttons */
+.company-summary .contact-info .contact-row {
+  margin-bottom: 0.5em;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
