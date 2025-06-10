@@ -9677,3 +9677,37 @@ application-header .divider .wrapper .detail {
 .faq .about-review {
   margin-bottom: 1em;
 }
+
+.reviews-flex {
+  display: flex;
+  gap: 1rem;
+}
+.reviews-flex .reviewlist {
+  flex: 0 0 70%;
+}
+.reviews-flex .right {
+  flex: 0 0 30%;
+}
+@media (max-width: 767px) {
+  .reviews-flex {
+    flex-direction: column;
+  }
+  .reviews-flex .reviewlist,
+  .reviews-flex .right {
+    flex-basis: 100%;
+  }
+}
+
+.average-rating-number-container {
+  background: none;
+  border-radius: 0;
+  position: static;
+  width: 10em;
+  height: auto;
+}
+.average-rating-number-container > .rating {
+  display: none;
+}
+.average-rating-number-container::before {
+  content: none;
+}
