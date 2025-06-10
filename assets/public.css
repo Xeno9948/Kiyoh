@@ -3736,8 +3736,8 @@ table th.full {
 
 .review>.review-content>.right {
   -webkit-box-flex: 0;
-  -ms-flex: 0 0 70%;
-  flex: 0 0 70%;
+  -ms-flex: 0 0 20%;
+  flex: 0 0 20%;
   min-width: 0;
   overflow: hidden;
   clear: left
@@ -3788,7 +3788,10 @@ table th.full {
   flex-flow: column nowrap;
   -webkit-box-align: center;
   -ms-flex-align: center;
-  align-items: center
+  align-items: center;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 80%;
+  flex: 0 0 80%
 }
 
 .review>.review-content>.left>* {
@@ -9522,8 +9525,8 @@ application-header .divider .wrapper .detail {
 }
 .review > .review-content > .right {
   -webkit-box-flex: 0;
-  -ms-flex: 0 0 70%;
-  flex: 0 0 70%;
+  -ms-flex: 0 0 20%;
+  flex: 0 0 20%;
   min-width: 0;
   overflow: hidden;
   clear: left;
@@ -9567,6 +9570,9 @@ application-header .divider .wrapper .detail {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 80%;
+  flex: 0 0 80%;
 }
 
 .review > .review-content > .left > * {
