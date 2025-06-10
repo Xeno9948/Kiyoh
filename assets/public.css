@@ -3415,7 +3415,7 @@ review-filters .filters {
 }
 
 .average-rating-number-container {
-  width: 10em;
+  width: 12em;
   height: 10em;
   border-radius: 50%;
   background: url('/assets/KV_shape.png') center center no-repeat;
@@ -6144,7 +6144,7 @@ html.widget-document body.kv-widget-body .default-widget-rating-number {
   display: block;
   background: url(/assets/kiyoh/images/kv_shape.png) 50% 50% no-repeat;
   background-size: cover;
-  width: 10em;
+  width: 12em;
   height: 10em;
   position: relative;
   color: #464343
@@ -9702,7 +9702,7 @@ application-header .divider .wrapper .detail {
   background: none;
   border-radius: 0;
   position: static;
-  width: 10em;
+  width: 12em;
   height: auto;
 }
 .average-rating-number-container > .rating {
