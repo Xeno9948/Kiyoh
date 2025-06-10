@@ -3715,29 +3715,40 @@ table th.full {
   box-shadow: 0 15px 12px rgba(0,0,0,0.30);
   backdrop-filter: blur(16px) saturate(180%);
   -webkit-backdrop-filter: blur(16px) saturate(180%);
-  display: flex;
   color: #716c6c;
 }
 @media only screen and (min-width:1024px) {
   .facebook-wrapper .review-summary .ratings-per-division ul li .rating {
     width: 10em
   }
+  .review > .review-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+  }
+  .review > .review-content > .left {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 30%;
+    flex: 0 0 30%;
+    margin-right: 2em;
+  }
+  .review > .review-content > .right {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 70%;
+    flex: 0 0 70%;
+  }
 }
 
-.review> .review-content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-flow: row nowrap;
-  flex-flow: row nowrap;
-}
+
 
 .review>.review-content>.right {
-  -webkit-box-flex: 0;
-  -ms-flex: 0 0 70%;
-  flex: 0 0 70%;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 0px;
+  flex: 1 1 0px;
   min-width: 0;
   overflow: hidden;
   clear: left
@@ -3789,9 +3800,6 @@ table th.full {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-flex: 0;
-  -ms-flex: 0 0 30%;
-  flex: 0 0 30%
 }
 
 .review>.review-content>.left>* {
@@ -9534,9 +9542,9 @@ application-header .divider .wrapper .detail {
   gap: 0.5em;
 }
 .review > .review-content > .right {
-  -webkit-box-flex: 0;
-  -ms-flex: 0 0 70%;
-  flex: 0 0 70%;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 0px;
+  flex: 1 1 0px;
   min-width: 0;
   overflow: hidden;
   clear: left;
@@ -9580,9 +9588,6 @@ application-header .divider .wrapper .detail {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-flex: 0;
-  -ms-flex: 0 0 30%;
-  flex: 0 0 30%;
 }
 
 .review > .review-content > .left > * {
