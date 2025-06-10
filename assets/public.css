@@ -3418,17 +3418,7 @@ review-filters .filters {
   width: 10em;
   height: 10em;
   border-radius: 50%;
-  z-index: 2;
-  text-align: center;
-  color: #464343;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  position: relative;
-}
-
-.average-rating-number-container>.rating {
-  display: block;
+  background: url("assets/score.png") center center/cover no-repeat;
   position: absolute;
   font-weight: 500;
   font-family: Gotham, Arial;
@@ -3438,15 +3428,7 @@ review-filters .filters {
   width: 100%;
   margin: -.55em 0 0 -.04em;
   letter-spacing: -.05em;
-  text-align: center
-}
-
-.footer-bottom-col,
-.footercol {
-  letter-spacing: -1px;
-  font-family: var(--font)
-}
-
+  content: none;
 .average-rating-number-container::before {
   content: '';
   position: absolute;
