@@ -9521,9 +9521,9 @@ application-header .divider .wrapper .detail {
   gap: 0.5em;
 }
 .review > .review-content > .right {
-  -webkit-box-flex: 1;
-  -ms-flex: 1 1 0px;
-  flex: 1 1 0px;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 70%;
+  flex: 0 0 70%;
   min-width: 0;
   overflow: hidden;
   clear: left;
@@ -9556,6 +9556,9 @@ application-header .divider .wrapper .detail {
 }
 
 .review > .review-content > .left {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 30%;
+  flex: 0 0 30%;
   margin-right: 2em;
   display: -webkit-box;
   display: -ms-flexbox;
