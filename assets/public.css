@@ -9481,11 +9481,19 @@ application-header .divider .wrapper .detail {
 }
 
 .summary-flex .review-summary,
-.summary-flex .company-summary,
-.summary-flex .company-details {
+.summary-flex .company-summary {
   flex: 1;
   display: flex;
   flex-direction: column;
+}
+
+/* width distribution for summary section */
+.summary-flex .review-summary {
+  flex: 0 0 65%;
+}
+
+.summary-flex .company-summary {
+  flex: 0 0 35%;
 }
 
 
@@ -9505,8 +9513,7 @@ application-header .divider .wrapper .detail {
   }
 
   .summary-flex .review-summary,
-  .summary-flex .company-summary,
-  .summary-flex .company-details {
+  .summary-flex .company-summary {
     margin: 0 auto;
     flex-basis: 100%;
   }
@@ -9689,8 +9696,22 @@ application-header .divider .wrapper .detail {
   flex: 0 0 65%;
 }
 
-.scroll-flex .company-details {
+.scroll-flex .company-card {
   flex: 0 0 35%;
+}
+
+.company-card {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(200, 200, 200, 0.3);
+  border-radius: 15px;
+  box-shadow: 0 15px 12px rgba(0,0,0,0.30);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 @media (max-width: 767px) {
@@ -9699,7 +9720,7 @@ application-header .divider .wrapper .detail {
   }
 
   .scroll-flex .reviewlist,
-  .scroll-flex .company-details {
+  .scroll-flex .company-card {
     flex-basis: 100%;
   }
 }
