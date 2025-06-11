@@ -4172,7 +4172,8 @@ table th.full {
 
 .review-summary .ratings-per-division .review-title {
   margin-top: 0;
-  font-weight: 700
+  font-weight: 700;
+  min-height: 2.5rem;
 }
 
 .review-summary .ratings-per-division .heading {
@@ -9576,7 +9577,8 @@ application-header .divider .wrapper .detail {
   font-size: 2em;
   font-weight: 700;
   margin-bottom: 0.5em;
-  margin-top: 2rem;
+  margin-top: 0;
+  min-height: 2.5rem;
 }
 
 /* Even spacing for contact buttons */
@@ -9757,6 +9759,13 @@ header.public-header .header-button {
   transition: all 0.2s ease-in-out;
 }
 
+@media (min-width: 768px) {
+  header.public-header .header-button {
+    padding: 0.75rem 1.25rem;
+    font-size: 1.1rem;
+  }
+}
+
 header.public-header .header-button:hover {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   transform: translateY(-1px);
@@ -9890,6 +9899,17 @@ header.public-header .search-part {
   align-items: center;
 }
 
+@media (max-width: 767px) {
+  header.public-header .search-part input[type="search"] {
+    display: none;
+    max-width: 0;
+  }
+  header.public-header .search-part.expanded input[type="search"] {
+    display: block;
+    max-width: 200px;
+  }
+}
+
 header.public-header .search-part input[type="search"] {
   width: 100%;
   max-width: 300px;
@@ -9912,6 +9932,13 @@ header.public-header .search-form .search-icon {
   transform: translateY(-50%);
   pointer-events: none;
   color: #666;
+}
+
+@media (max-width: 767px) {
+  header.public-header .search-form .search-icon {
+    pointer-events: auto;
+    cursor: pointer;
+  }
 }
 header.public-header .header-links {
   flex: 1 1 auto;

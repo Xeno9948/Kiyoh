@@ -49,5 +49,22 @@ document.addEventListener('DOMContentLoaded', function () {
       if (links) links.classList.toggle('open');
     });
   }
+
+  var searchPart = document.querySelector('header.public-header .search-part');
+  if (searchPart) {
+    var searchIcon = searchPart.querySelector('.search-icon');
+    var searchInput = searchPart.querySelector('input[type="search"]');
+    if (searchIcon && searchInput) {
+      searchIcon.addEventListener('click', function(e) {
+        if (window.innerWidth <= 767) {
+          e.preventDefault();
+          searchPart.classList.toggle('expanded');
+          if (searchPart.classList.contains('expanded')) {
+            searchInput.focus();
+          }
+        }
+      });
+    }
+  }
 });
 
