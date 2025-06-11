@@ -9683,6 +9683,7 @@ application-header .divider .wrapper .detail {
 /* Layout for reviews and company details */
 .scroll-flex {
   display: flex;
+  align-items: flex-start;
   gap: 1rem;
 }
 
