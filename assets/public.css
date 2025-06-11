@@ -1892,16 +1892,17 @@ header.public-header>.content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-  -ms-flex-flow: column nowrap;
-  flex-flow: column nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: flex-start
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  flex-wrap: nowrap
 }
 
 .notification-prompt,
@@ -9751,10 +9752,83 @@ header.public-header .search-part {
 header.public-header .search-part input[type="search"] {
   width: 100%;
   max-width: 300px;
-  padding: 0.5em 1em;
+  padding: 0.5em 1em 0.5em 2.2em;
   border-radius: 20px;
   border: 1px solid #ccc;
   background: rgba(255, 255, 255, 0.6);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
+}
+
+header.public-header .search-form {
+  position: relative;
+}
+
+header.public-header .search-form .search-icon {
+  position: absolute;
+  left: 0.8em;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #666;
+}
+
+/* Review grid layout */
+.review > .review-content {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-areas:
+    "num stars"
+    "text text"
+    "extra extra";
+  gap: 0.5rem 1rem;
+}
+
+.review > .review-content > .left,
+.review > .review-content > .right {
+  display: contents;
+}
+
+.review > .review-content .rating-number {
+  grid-area: num;
+}
+
+.review > .review-content > .right > .overall-rating-stars {
+  grid-area: stars;
+  align-self: center;
+}
+
+.review > .review-content > .right > .rating-description {
+  grid-area: text;
+}
+
+.review > .review-content > .right > .ratings-per-division,
+.review > .review-content > .right > .meta-data,
+.review > .review-content > .right > .review-response,
+.review > .review-content > .right > .response-actions {
+  grid-column: 1 / -1;
+}
+
+.review-response {
+  display: none;
+}
+.review-response.visible {
+  display: block;
+}
+
+.response-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5em;
+  margin-top: 0.5em;
+}
+
+.response-actions button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.response-actions .share-button .icon-share {
+  font-size: 1.2em;
 }
