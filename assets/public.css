@@ -1907,6 +1907,12 @@ header.public-header>.content {
   flex-wrap: nowrap
 }
 
+@media (max-width: 767px) {
+  header.public-header > .content {
+    justify-content: flex-start;
+  }
+}
+
 .notification-prompt,
 header.public-header .part {
   display: -webkit-box;
@@ -4172,7 +4178,10 @@ table th.full {
 
 .review-summary .ratings-per-division .review-title {
   margin-top: 0;
-  font-weight: 700
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 2.625rem;
+  min-height: 2.625rem;
 }
 
 .review-summary .ratings-per-division .heading {
@@ -9473,6 +9482,7 @@ application-header .divider .wrapper .detail {
   display: flex;
   width: 100%;
   margin: 0 auto;
+  max-width: 1200px;
   justify-content: flex-start;
   align-items: stretch;
   gap: 1rem;
@@ -9573,10 +9583,12 @@ application-header .divider .wrapper .detail {
 
 /* Styling for the Bedrijfsoverzicht heading */
 .company-summary .review-title {
-  font-size: 2em;
+  font-size: 2rem;
+  line-height: 2.625rem;
   font-weight: 700;
   margin-bottom: 0.5em;
-  margin-top: 2rem;
+  margin-top: 0;
+  min-height: 2.625rem;
 }
 
 /* Even spacing for contact buttons */
@@ -9757,6 +9769,13 @@ header.public-header .header-button {
   transition: all 0.2s ease-in-out;
 }
 
+@media (min-width: 768px) {
+  header.public-header .header-button {
+    padding: 0.65rem 1.25rem;
+    font-size: 1.05rem;
+  }
+}
+
 header.public-header .header-button:hover {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   transform: translateY(-1px);
@@ -9782,6 +9801,7 @@ header.public-header .menu-toggle {
 @media (max-width: 767px) {
   header.public-header .mobile-toggle {
     display: flex;
+    margin-left: 0.5rem;
   }
   header.public-header .menu-toggle {
     display: block;
@@ -9862,7 +9882,6 @@ header.public-header .menu-toggle {
 }
 
 @media (min-width: 768px) {
-  .summary-flex,
   .scroll-flex {
     max-width: 1200px;
     margin-left: auto;
@@ -9890,6 +9909,23 @@ header.public-header .search-part {
   align-items: center;
 }
 
+@media (max-width: 767px) {
+  header.public-header .search-part .search-form {
+    width: 2.5rem;
+  }
+  header.public-header .search-part input[type="search"] {
+    display: none;
+    max-width: 0;
+  }
+  header.public-header .search-part.expanded .search-form {
+    width: auto;
+  }
+  header.public-header .search-part.expanded input[type="search"] {
+    display: block;
+    max-width: 200px;
+  }
+}
+
 header.public-header .search-part input[type="search"] {
   width: 100%;
   max-width: 300px;
@@ -9912,6 +9948,13 @@ header.public-header .search-form .search-icon {
   transform: translateY(-50%);
   pointer-events: none;
   color: #666;
+}
+
+@media (max-width: 767px) {
+  header.public-header .search-form .search-icon {
+    pointer-events: auto;
+    cursor: pointer;
+  }
 }
 header.public-header .header-links {
   flex: 1 1 auto;
