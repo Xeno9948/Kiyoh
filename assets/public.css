@@ -9678,3 +9678,28 @@ application-header .divider .wrapper .detail {
 .orange-button:active {
   transform: scale(0.98);
 }
+
+/* Layout for reviews and company details */
+.scroll-flex {
+  display: flex;
+  gap: 1rem;
+}
+
+.scroll-flex .reviewlist {
+  flex: 0 0 65%;
+}
+
+.scroll-flex .company-details {
+  flex: 0 0 35%;
+}
+
+@media (max-width: 767px) {
+  .scroll-flex {
+    flex-direction: column;
+  }
+
+  .scroll-flex .reviewlist,
+  .scroll-flex .company-details {
+    flex-basis: 100%;
+  }
+}
