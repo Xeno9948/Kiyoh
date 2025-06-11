@@ -9478,10 +9478,11 @@ application-header .divider .wrapper .detail {
 }
 
 /* Full-width flex container for summaries */
+
 .summary-flex {
   display: flex;
   width: 100%;
-  max-width: 688px;
+  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
   justify-content: center;
@@ -9491,19 +9492,22 @@ application-header .divider .wrapper .detail {
   box-sizing: border-box;
 }
 
+
 .summary-flex .review-summary,
 .summary-flex .company-summary {
-  flex: 0 0 auto;
+  flex: 1;
   display: flex;
   flex-direction: column;
 }
 
-/* width distribution for summary section no longer required */
+/* width distribution for summary section */
 .summary-flex .review-summary {
   padding-left: 0;
+  flex: 0 0 65%;
 }
 
 .summary-flex .company-summary {
+  flex: 0 0 35%;
 }
 
 
@@ -10049,7 +10053,7 @@ header.public-header .header-links {
   border: 1px solid rgba(255, 255, 255, 0.4);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
   color: #000;
-  width: 320px;
+  width: 100%;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
