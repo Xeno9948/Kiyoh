@@ -517,8 +517,9 @@ ul.real-list {
 .container {
   margin: 0 auto;
   width: 100%;
-  max-width: 1250px;
-  padding: 2.5rem 16px
+  max-width: none;
+  padding: 2.5rem 16px;
+  box-sizing: border-box;
 }
 
 .backgrounded:before,
@@ -3427,7 +3428,7 @@ review-filters .filters {
   width: 15rem;
   height: 15rem;
   position: relative;
-  background: url('socre1.png');
+  background: url('kv_shape.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -9554,6 +9555,33 @@ application-header .divider .wrapper .detail {
   align-items: flex-start;
 }
 
+/* Buttons row styling */
+.company-summary .contact-buttons {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  margin-bottom: 1rem;
+}
+
+.company-summary .contact-buttons a {
+  flex: 1;
+  text-align: center;
+}
+
+.company-summary .contact-buttons button {
+  width: 100%;
+}
+
+.company-summary .opening-hours ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.company-summary .opening-hours li {
+  margin: 0.25em 0;
+}
+
 @media (max-width: 767px) {
   .company-summary .contact-flex {
     flex-direction: column;
@@ -9694,6 +9722,7 @@ application-header .divider .wrapper .detail {
   display: flex;
   align-items: flex-start;
   gap: 1rem;
+  width: 100%;
 }
 
 .scroll-flex .reviewlist {
