@@ -9474,7 +9474,7 @@ application-header .divider .wrapper .detail {
   margin: 0 auto;
   justify-content: center;
   align-items: stretch;
-  gap: 2rem;
+  gap: 1rem;
   padding: 0 1rem;
   box-sizing: border-box;
 }
@@ -9560,8 +9560,13 @@ application-header .divider .wrapper .detail {
 
 .company-summary .contact-buttons button {
   width: 100%;
-  padding-top: 32px;
-  padding-bottom: 32px;
+  padding-top: 22px;
+  padding-bottom: 22px;
+  font-size: 14px;
+}
+
+.company-summary .contact-buttons button .fa {
+  font-size: 1.2em;
 }
 
 .company-summary .opening-hours ul {
@@ -9695,6 +9700,30 @@ application-header .divider .wrapper .detail {
   cursor: pointer;
 }
 
+header.public-header .header-button {
+  background: rgba(255, 255, 255, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.65);
+  border-radius: 16px;
+  color: #333;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+header.public-header .header-button:hover {
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transform: translateY(-1px);
+}
+
+header.public-header .header-button:active {
+  transform: scale(0.98);
+}
+
 .orange-button:hover {
   box-shadow: 0 6px 12px rgba(221, 104, 38, 0.35);
   transform: translateY(-1px);
@@ -9708,6 +9737,7 @@ application-header .divider .wrapper .detail {
 .scroll-flex {
   display: flex;
   align-items: flex-start;
+  justify-content: center;
   gap: 1rem;
   width: 100%;
   margin: 0 auto;
@@ -9716,6 +9746,7 @@ application-header .divider .wrapper .detail {
 .scroll-flex .reviewlist {
   flex: 0 0 65%;
   order: 1;
+  padding-left: 0;
 }
 
 .scroll-flex .company-card {
@@ -9752,10 +9783,11 @@ application-header .divider .wrapper .detail {
 @media (min-width: 768px) {
   .summary-flex,
   .scroll-flex {
-    margin-left: 0;
-    margin-right: 0;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 }
 
