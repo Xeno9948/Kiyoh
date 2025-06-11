@@ -9853,9 +9853,25 @@ header.public-header .search-form .search-icon {
 }
 
 .response-actions button {
-  background: none;
-  border: none;
+  background: transparent;
+  border: 1px solid #DD6826;
+  color: #DD6826;
+  padding: 0.25em 0.75em;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 0.875rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25em;
   cursor: pointer;
+}
+
+.response-actions button span[class^="icon-"] {
+  margin-right: 0.25em;
+}
+
+.response-actions button:hover {
+  background: rgba(221, 104, 38, 0.1);
 }
 
 .response-actions .share-button .icon-share {
