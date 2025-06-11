@@ -9481,7 +9481,7 @@ application-header .divider .wrapper .detail {
 /* Full-width flex container for summaries */
 .summary-flex {
   display: flex;
-  width: 100%;
+  width: 80%;
   margin: 0 auto;
   justify-content: center;
   align-items: stretch;
@@ -9514,6 +9514,7 @@ application-header .divider .wrapper .detail {
 @media (max-width: 767px) {
   .summary-flex {
     flex-direction: column;
+    width: 100%;
   }
 
   .summary-flex .review-summary,
@@ -9722,7 +9723,8 @@ application-header .divider .wrapper .detail {
   display: flex;
   align-items: flex-start;
   gap: 1rem;
-  width: 100%;
+  width: 80%;
+  margin: 0 auto;
 }
 
 .scroll-flex .reviewlist {
@@ -9752,6 +9754,7 @@ application-header .divider .wrapper .detail {
 @media (max-width: 767px) {
   .scroll-flex {
     flex-direction: column;
+    width: 100%;
   }
 
   .scroll-flex .reviewlist,
