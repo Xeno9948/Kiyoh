@@ -10105,42 +10105,48 @@ header.public-header .header-links {
   transform: translateY(0);
 }
 
-.frosted-icons {
-  display: flex;
-  justify-content: center;
-  margin-top: 1rem;
-  gap: 0.75rem;
+/* Skeuomorphic liquid glass button style */
+.skeuo-glass {
+  backdrop-filter: blur(20px) saturate(160%);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+  background: linear-gradient(to bottom right, rgba(255,255,255,0.2), rgba(255,255,255,0.05));
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 24px;
+  box-shadow:
+    inset 0 1px 1.5px rgba(255, 255, 255, 0.4),
+    inset 0 -1px 2px rgba(0, 0, 0, 0.15),
+    0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-.frosted-icons button {
-  background: linear-gradient(145deg, rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0.15));
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border-radius: 50%;
-  width: 3rem;
-  height: 3rem;
+
+
+/* Contact action layout */
+.company-summary .contact-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 0.75rem;
+}
+.company-summary .contact-actions .website-btn {
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.1rem;
-  color: #333;
-  cursor: pointer;
-  box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.6),
-              inset 0 -1px 2px rgba(0, 0, 0, 0.2),
-              0 2px 4px rgba(0, 0, 0, 0.2);
-  transition: background 0.3s ease, transform 0.2s ease;
+  gap: 0.5rem;
+  padding: 0.75rem;
+  font-size: 1rem;
 }
-.frosted-icons button .fa {
-  color: inherit;
+.company-summary .contact-actions .secondary-buttons {
+  display: flex;
+  width: 100%;
+  gap: 0.75rem;
 }
-
-.frosted-icons button:hover {
-  background: linear-gradient(145deg, rgba(255, 255, 255, 0.65), rgba(255, 255, 255, 0.25));
-  transform: translateY(-1px);
-}
-
-.frosted-icons button:active {
-  background: linear-gradient(145deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.2));
-  transform: translateY(0);
+.company-summary .contact-actions .secondary-buttons a {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 0;
+  font-size: 1rem;
 }
