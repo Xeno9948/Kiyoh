@@ -461,7 +461,7 @@ body,
 p {
   font-size: 1rem;
   font-weight: 300;
-  font-family: Gotham, Arial
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif
 }
 
 body {
@@ -1885,6 +1885,7 @@ header.public-header {
 }
 
 header.public-header>.content {
+  position: relative;
   margin: 0 auto;
   width: 100%;
   max-width: none;
@@ -9472,9 +9473,9 @@ application-header .divider .wrapper .detail {
   display: flex;
   width: 100%;
   margin: 0 auto;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: stretch;
-  gap: 2rem;
+  gap: 1rem;
   padding: 0 1rem;
   box-sizing: border-box;
 }
@@ -9489,6 +9490,7 @@ application-header .divider .wrapper .detail {
 /* width distribution for summary section */
 .summary-flex .review-summary {
   flex: 0 0 65%;
+  padding-left: 0;
 }
 
 .summary-flex .company-summary {
@@ -9497,7 +9499,47 @@ application-header .divider .wrapper .detail {
 
 
 .faq {
-  margin-top: 1rem;
+  max-width: 500px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.faq details {
+  margin-bottom: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  background: #f0ede9;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.faq summary {
+  all: unset;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 1rem 1.2rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #111;
+  cursor: pointer;
+}
+
+.faq summary .toggle {
+  font-size: 1.3rem;
+  line-height: 1;
+}
+
+.faq .about-review-description {
+  padding: 0 1.2rem 1rem;
+  font-size: 0.95rem;
+  color: #444;
+  display: none;
+}
+
+.faq details[open] .about-review-description {
+  display: block;
 }
 
 @media (max-width: 767px) {
@@ -9560,8 +9602,13 @@ application-header .divider .wrapper .detail {
 
 .company-summary .contact-buttons button {
   width: 100%;
-  padding-top: 32px;
-  padding-bottom: 32px;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  font-size: 14px;
+}
+
+.company-summary .contact-buttons button .fa {
+  font-size: 1.2em;
 }
 
 .company-summary .opening-hours ul {
@@ -9695,6 +9742,67 @@ application-header .divider .wrapper .detail {
   cursor: pointer;
 }
 
+header.public-header .header-button {
+  background: rgba(255, 255, 255, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.65);
+  border-radius: 16px;
+  color: #333;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+header.public-header .header-button:hover {
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transform: translateY(-1px);
+}
+
+header.public-header .header-button:active {
+  transform: scale(0.98);
+}
+
+header.public-header .mobile-toggle {
+  display: none;
+}
+
+header.public-header .menu-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  color: #333;
+  cursor: pointer;
+}
+
+@media (max-width: 767px) {
+  header.public-header .mobile-toggle {
+    display: flex;
+  }
+  header.public-header .menu-toggle {
+    display: block;
+  }
+  header.public-header .header-links {
+    display: none;
+    position: absolute;
+    right: 1rem;
+    top: 100%;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 0.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    gap: 0.5rem;
+  }
+  header.public-header .header-links.open {
+    display: flex;
+  }
+}
+
 .orange-button:hover {
   box-shadow: 0 6px 12px rgba(221, 104, 38, 0.35);
   transform: translateY(-1px);
@@ -9708,6 +9816,7 @@ application-header .divider .wrapper .detail {
 .scroll-flex {
   display: flex;
   align-items: flex-start;
+  justify-content: flex-start;
   gap: 1rem;
   width: 100%;
   margin: 0 auto;
@@ -9716,6 +9825,7 @@ application-header .divider .wrapper .detail {
 .scroll-flex .reviewlist {
   flex: 0 0 65%;
   order: 1;
+  padding-left: 0;
 }
 
 .scroll-flex .company-card {
@@ -9752,10 +9862,11 @@ application-header .divider .wrapper .detail {
 @media (min-width: 768px) {
   .summary-flex,
   .scroll-flex {
-    margin-left: 0;
-    margin-right: 0;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 }
 

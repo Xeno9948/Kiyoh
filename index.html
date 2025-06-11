@@ -58,21 +58,24 @@
         <img src="assets/tenant-logo.svg" />
       </div>
     </div>
-    <div class="part search-part">
-      <form class="search-form" action="https://www.kiyoh.cm/reviews" method="get">
-        <span class="icon-search search-icon"></span>
-        <input type="search" name="q" placeholder="zoek een bedrijf" />
-      </form>
-    </div>
-    <div class="part header-links">
-      <a href="https://www.kiyoh.com/privacy" target="_blank" rel="noopener">
-        <button class="orange-button shrink primary">Privacy</button>
-      </a>
+      <div class="part search-part">
+        <form class="search-form" action="https://www.kiyoh.cm/reviews" method="get">
+          <span class="icon-search search-icon"></span>
+          <input type="search" name="q" placeholder="zoek een bedrijf" />
+        </form>
+      </div>
+      <div class="part mobile-toggle">
+        <button class="menu-toggle" aria-label="Menu"><span class="fa fa-bars" aria-hidden="true"></span></button>
+      </div>
+      <div class="part header-links">
+        <a href="https://www.kiyoh.com/privacy" target="_blank" rel="noopener">
+          <button class="header-button">Privacy</button>
+        </a>
       <a href="https://www.kiyoh.com/faq-2" target="_blank" rel="noopener">
-        <button class="orange-button shrink primary">FAQ</button>
+        <button class="header-button">FAQ</button>
       </a>
       <a href="https://www.kiyoh.com/google-review-partner-wat-betekent-dit-voor-jouw-bedrijf/" target="_blank" rel="noopener">
-        <button class="orange-button shrink primary">Google Review Partner</button>
+        <button class="header-button">Google Review Partner</button>
       </a>
     </div>
     <div bis_skin_checked="1" class="part">
@@ -359,6 +362,7 @@
       </div>
     </div>
   </div>
+  <div class="filters public"></div>
   <div class="scroll-flex">
     <div class="company-card">
       <div class="company-details">
@@ -394,7 +398,7 @@
     </div>
     <div class="faq">
       <details class="about-review">
-        <summary>Iedereen kan een review schrijven – onder voorwaarden</summary>
+        <summary>Iedereen kan een review schrijven – onder voorwaarden <span class="toggle">&#x25BC;</span></summary>
         <div class="about-review-description">
           <p>Een review mag worden geschreven door iedere klant met een aankoop- of gebruikservaring. Het is
             belangrijk dat de inhoud van de beoordeling gebaseerd is op een echte interactie met het bedrijf. Meer
@@ -402,7 +406,7 @@
         </div>
       </details>
       <details class="about-review">
-        <summary>Eerlijke feedback is waardevol</summary>
+        <summary>Eerlijke feedback is waardevol <span class="toggle">&#x25BC;</span></summary>
         <div class="about-review-description">
           <p>We moedigen klanten aan om hun ervaringen zo eerlijk, concreet en duidelijk mogelijk te beschrijven.
             Goede reviews helpen andere consumenten bij het maken van keuzes én geven bedrijven waardevolle
@@ -411,7 +415,7 @@
         </div>
       </details>
       <details class="about-review">
-        <summary>We nemen misbruik serieus</summary>
+        <summary>We nemen misbruik serieus <span class="toggle">&#x25BC;</span></summary>
         <div class="about-review-description">
           <p>Kiyoh zet zich actief in om misbruik en nepreviews tegen te gaan. Reviews die op eigen initiatief zijn
             geschreven worden direct online getoond en binnen 72 uur geverifieerd. Als er signalen zijn dat een
@@ -421,7 +425,7 @@
         </div>
       </details>
       <details class="about-review">
-        <summary>Geen beloningen voor reviews</summary>
+        <summary>Geen beloningen voor reviews <span class="toggle">&#x25BC;</span></summary>
         <div class="about-review-description">
           <p>Verkopers mogen klanten geen financiële prikkels aanbieden in ruil voor beoordelingen. Dit betekent dat
             het aanbieden van gratis producten, cadeaubonnen, kortingen op toekomstige aankopen of andere vormen van
@@ -431,7 +435,7 @@
         </div>
       </details>
       <details class="about-review">
-        <summary>Recente meningen bovenaan</summary>
+        <summary>Recente meningen bovenaan <span class="toggle">&#x25BC;</span></summary>
         <div class="about-review-description">
           <p>Om gebruikers een actueel beeld te geven, tonen we standaard de meest recente reviews bovenaan. Zo kun je
             in één oogopslag zien hoe het bedrijf de laatste tijd heeft gepresteerd. Wil je meer weten over hoe deze
@@ -439,7 +443,7 @@
         </div>
       </details>
       <details class="about-review">
-        <summary>Onafhankelijk en neutraal</summary>
+        <summary>Onafhankelijk en neutraal <span class="toggle">&#x25BC;</span></summary>
         <div class="about-review-description">
           <p>Kiyoh is een onafhankelijk platform en erkend Google reviewpartner. Of een review nu lovend is of juist
             kritisch – iedere stem telt. Alleen zo ontstaat er een eerlijk en genuanceerd beeld waar zowel bedrijven
@@ -553,11 +557,12 @@
                   </div>
                 </div>
               </div>
-            </div>
-                    <div class="response-actions">
+            <div class="response-actions">
                       <button class="toggle-response"><span class="icon-reply"></span> antwoord bedrijf</button>
                       <button class="share-button"><span class="icon-share"></span> delen</button>
                     </div>
+</div>
+                    
             <div bis_skin_checked="1" class="review">
               <div bis_skin_checked="1" class="review-content">
                 <div bis_skin_checked="1" class="left">
@@ -636,11 +641,11 @@
                   </div>
                 </div>
               </div>
-            </div>
-                    <div class="response-actions">
-                      <button class="toggle-response"><span class="icon-reply"></span> antwoord bedrijf</button>
+            <div class="response-actions">
                       <button class="share-button"><span class="icon-share"></span> delen</button>
                     </div>
+</div>
+                    
             <div bis_skin_checked="1" class="review">
               <div bis_skin_checked="1" class="review-content">
                 <div bis_skin_checked="1" class="left">
@@ -718,11 +723,11 @@
                   </div>
                 </div>
               </div>
-            </div>
-                    <div class="response-actions">
-                      <button class="toggle-response"><span class="icon-reply"></span> antwoord bedrijf</button>
+            <div class="response-actions">
                       <button class="share-button"><span class="icon-share"></span> delen</button>
                     </div>
+</div>
+                    
             <div bis_skin_checked="1" class="review">
               <div bis_skin_checked="1" class="review-content">
                 <div bis_skin_checked="1" class="left">
@@ -800,11 +805,11 @@
                   </div>
                 </div>
               </div>
-            </div>
-                    <div class="response-actions">
-                      <button class="toggle-response"><span class="icon-reply"></span> antwoord bedrijf</button>
+            <div class="response-actions">
                       <button class="share-button"><span class="icon-share"></span> delen</button>
                     </div>
+</div>
+                    
             <div bis_skin_checked="1" class="review">
               <div bis_skin_checked="1" class="review-content">
                 <div bis_skin_checked="1" class="left">
@@ -883,11 +888,11 @@
                   </div>
                 </div>
               </div>
-            </div>
-                    <div class="response-actions">
-                      <button class="toggle-response"><span class="icon-reply"></span> antwoord bedrijf</button>
+            <div class="response-actions">
                       <button class="share-button"><span class="icon-share"></span> delen</button>
                     </div>
+</div>
+                    
             <div bis_skin_checked="1" class="review">
               <div bis_skin_checked="1" class="review-content">
                 <div bis_skin_checked="1" class="left">
@@ -967,11 +972,11 @@
                   </div>
                 </div>
               </div>
-            </div>
-                    <div class="response-actions">
-                      <button class="toggle-response"><span class="icon-reply"></span> antwoord bedrijf</button>
+            <div class="response-actions">
                       <button class="share-button"><span class="icon-share"></span> delen</button>
                     </div>
+</div>
+                    
             <div bis_skin_checked="1" class="review">
               <div bis_skin_checked="1" class="review-content">
                 <div bis_skin_checked="1" class="left">
@@ -1050,11 +1055,11 @@
                   </div>
                 </div>
               </div>
-            </div>
-                    <div class="response-actions">
-                      <button class="toggle-response"><span class="icon-reply"></span> antwoord bedrijf</button>
+            <div class="response-actions">
                       <button class="share-button"><span class="icon-share"></span> delen</button>
                     </div>
+</div>
+                    
             <div bis_skin_checked="1" class="review">
               <div bis_skin_checked="1" class="review-content">
                 <div bis_skin_checked="1" class="left">
@@ -1132,11 +1137,11 @@
                   </div>
                 </div>
               </div>
-            </div>
-                    <div class="response-actions">
-                      <button class="toggle-response"><span class="icon-reply"></span> antwoord bedrijf</button>
+            <div class="response-actions">
                       <button class="share-button"><span class="icon-share"></span> delen</button>
                     </div>
+</div>
+                    
             <div bis_skin_checked="1" class="review">
               <div bis_skin_checked="1" class="review-content">
                 <div bis_skin_checked="1" class="left">
@@ -1214,11 +1219,11 @@
                   </div>
                 </div>
               </div>
-            </div>
-                    <div class="response-actions">
-                      <button class="toggle-response"><span class="icon-reply"></span> antwoord bedrijf</button>
+            <div class="response-actions">
                       <button class="share-button"><span class="icon-share"></span> delen</button>
                     </div>
+</div>
+                    
             <div bis_skin_checked="1" class="review">
               <div bis_skin_checked="1" class="review-content">
                 <div bis_skin_checked="1" class="left">
@@ -1298,11 +1303,11 @@
                   </div>
                 </div>
               </div>
-            </div>
-                    <div class="response-actions">
-                      <button class="toggle-response"><span class="icon-reply"></span> antwoord bedrijf</button>
+            <div class="response-actions">
                       <button class="share-button"><span class="icon-share"></span> delen</button>
                     </div>
+</div>
+                    
             <div bis_skin_checked="1" class="review">
               <div bis_skin_checked="1" class="review-content">
                 <div bis_skin_checked="1" class="left">
@@ -1381,11 +1386,11 @@
                   </div>
                 </div>
               </div>
-            </div>
-                    <div class="response-actions">
-                      <button class="toggle-response"><span class="icon-reply"></span> antwoord bedrijf</button>
+            <div class="response-actions">
                       <button class="share-button"><span class="icon-share"></span> delen</button>
                     </div>
+</div>
+                    
             <div bis_skin_checked="1" class="review">
               <div bis_skin_checked="1" class="review-content">
                 <div bis_skin_checked="1" class="left">
@@ -1464,11 +1469,11 @@
                   </div>
                 </div>
               </div>
-            </div>
-                    <div class="response-actions">
-                      <button class="toggle-response"><span class="icon-reply"></span> antwoord bedrijf</button>
+            <div class="response-actions">
                       <button class="share-button"><span class="icon-share"></span> delen</button>
                     </div>
+</div>
+                    
             <div bis_skin_checked="1" class="review">
               <div bis_skin_checked="1" class="review-content">
                 <div bis_skin_checked="1" class="left">
@@ -1547,11 +1552,11 @@
                   </div>
                 </div>
               </div>
-            </div>
-                    <div class="response-actions">
-                      <button class="toggle-response"><span class="icon-reply"></span> antwoord bedrijf</button>
+            <div class="response-actions">
                       <button class="share-button"><span class="icon-share"></span> delen</button>
                     </div>
+</div>
+                    
             <div bis_skin_checked="1" class="review">
               <div bis_skin_checked="1" class="review-content">
                 <div bis_skin_checked="1" class="left">
@@ -1629,11 +1634,11 @@
                   </div>
                 </div>
               </div>
-            </div>
-                    <div class="response-actions">
-                      <button class="toggle-response"><span class="icon-reply"></span> antwoord bedrijf</button>
+            <div class="response-actions">
                       <button class="share-button"><span class="icon-share"></span> delen</button>
                     </div>
+</div>
+                    
             <div bis_skin_checked="1" class="review">
               <div bis_skin_checked="1" class="review-content">
                 <div bis_skin_checked="1" class="left">
@@ -1715,11 +1720,12 @@
                           </table>
                         </div>
                       </div>
-                    </div>
                     <div class="response-actions">
                       <button class="toggle-response"><span class="icon-reply"></span> antwoord bedrijf</button>
                       <button class="share-button"><span class="icon-share"></span> delen</button>
                     </div>
+</div>
+                    
                     <div bis_skin_checked="1" class="review-response">
                       <div bis_skin_checked="1" class="align-elements center spaced">
                         <h3>Reactie van het bedrijf</h3>
@@ -1820,11 +1826,11 @@
                   </div>
                 </div>
               </div>
-            </div>
-                    <div class="response-actions">
-                      <button class="toggle-response"><span class="icon-reply"></span> antwoord bedrijf</button>
+            <div class="response-actions">
                       <button class="share-button"><span class="icon-share"></span> delen</button>
                     </div>
+</div>
+                    
             <div bis_skin_checked="1" class="review">
               <div bis_skin_checked="1" class="review-content">
                 <div bis_skin_checked="1" class="left">
@@ -1892,11 +1898,11 @@
                   </div>
                 </div>
               </div>
-            </div>
-                    <div class="response-actions">
-                      <button class="toggle-response"><span class="icon-reply"></span> antwoord bedrijf</button>
+            <div class="response-actions">
                       <button class="share-button"><span class="icon-share"></span> delen</button>
                     </div>
+</div>
+                    
             <div bis_skin_checked="1" class="review">
               <div bis_skin_checked="1" class="review-content">
                 <div bis_skin_checked="1" class="left">
@@ -1981,11 +1987,11 @@
                   </div>
                 </div>
               </div>
-            </div>
-                    <div class="response-actions">
-                      <button class="toggle-response"><span class="icon-reply"></span> antwoord bedrijf</button>
+            <div class="response-actions">
                       <button class="share-button"><span class="icon-share"></span> delen</button>
                     </div>
+</div>
+                    
             <div bis_skin_checked="1" class="review">
               <div bis_skin_checked="1" class="review-content">
                 <div bis_skin_checked="1" class="left">
@@ -2063,11 +2069,11 @@
                   </div>
                 </div>
               </div>
-            </div>
-                    <div class="response-actions">
-                      <button class="toggle-response"><span class="icon-reply"></span> antwoord bedrijf</button>
+            <div class="response-actions">
                       <button class="share-button"><span class="icon-share"></span> delen</button>
                     </div>
+</div>
+                    
             <div bis_skin_checked="1" class="review">
               <div bis_skin_checked="1" class="review-content">
                 <div bis_skin_checked="1" class="left">
@@ -2150,31 +2156,29 @@
                 </div>
               </div>
             </div>
-  </div>
-                    <div class="response-actions">
-                      <button class="toggle-response"><span class="icon-reply"></span> antwoord bedrijf</button>
+  <div class="response-actions">
                       <button class="share-button"><span class="icon-share"></span> delen</button>
                     </div>
-          </div>
-          <div bis_skin_checked="1" class="component">
-            <div bis_skin_checked="1" class="button-container">
-              <a>
-                <button class="orange-button primary" disabled="">Vorige</button>
-              </a>
-              <link href="https://www.kiyoh.com/reviews/1044505/kiyoh_nl_klantbeoordelingen?from=widget&amp;lang=nl"
-                rel="Vorige" />
-              <a
-                href="https://www.kiyoh.com/reviews/1044505/kiyoh_nl_klantbeoordelingen?lang=nl&amp;limit=25&amp;pageNumber=1">
-                <button class="orange-button primary">Volgende</button>
-              </a>
-              <link
-                href="https://www.kiyoh.com/reviews/1044505/kiyoh_nl_klantbeoordelingen?lang=nl&amp;limit=25&amp;pageNumber=1"
-                rel="Volgende" />
-            </div>
+</div>
+                    
           </div>
         </div>
       </div>
     </div>
+  <div class="component">
+    <div class="button-container">
+      <a>
+        <button class="orange-button primary" disabled="">Vorige</button>
+      </a>
+      <link href="https://www.kiyoh.com/reviews/1044505/kiyoh_nl_klantbeoordelingen?from=widget&amp;lang=nl"
+        rel="Vorige" />
+      <a href="https://www.kiyoh.com/reviews/1044505/kiyoh_nl_klantbeoordelingen?lang=nl&amp;limit=25&amp;pageNumber=1">
+        <button class="orange-button primary">Volgende</button>
+      </a>
+      <link href="https://www.kiyoh.com/reviews/1044505/kiyoh_nl_klantbeoordelingen?lang=nl&amp;limit=25&amp;pageNumber=1"
+        rel="Volgende" />
+    </div>
+  </div>
   <script src="assets/location.js"></script>
     <script src="assets/public-page-filters.js"></script>
     <script src="assets/popup.js"></script>
@@ -3040,6 +3044,6 @@
       kv.initFilters();
       kv.initToolTip();
     </script>
-</body>
+  </body>
 
 </html>
