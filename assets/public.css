@@ -3432,7 +3432,7 @@ review-filters .filters {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  border-radius: 50%;
+  /* retain square background */
 }
 
 .average-rating-number-container>.rating {
@@ -3455,17 +3455,6 @@ review-filters .filters {
   font-family: var(--font)
 }
 
-.average-rating-number-container::before {
-  content: '';
-  position: absolute;
-  top: 25%;
-  left: 25%;
-  width: 50%;
-  height: 50%;
-  background: white;
-  border-radius: 50%;
-  z-index: 1;
-}
 
 .public-filter .rating-stars [class^=icon-star]:not(.icon-star-o) {
   color: #FFB612
@@ -9481,7 +9470,7 @@ application-header .divider .wrapper .detail {
 /* Full-width flex container for summaries */
 .summary-flex {
   display: flex;
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
   justify-content: center;
   align-items: stretch;
@@ -9551,7 +9540,7 @@ application-header .divider .wrapper .detail {
 /* Even spacing for contact buttons */
 .company-summary .contact-flex {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   gap: 1rem;
   align-items: flex-start;
 }
@@ -9571,6 +9560,8 @@ application-header .divider .wrapper .detail {
 
 .company-summary .contact-buttons button {
   width: 100%;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
 .company-summary .opening-hours ul {
@@ -9583,11 +9574,6 @@ application-header .divider .wrapper .detail {
   margin: 0.25em 0;
 }
 
-@media (max-width: 767px) {
-  .company-summary .contact-flex {
-    flex-direction: column;
-  }
-}
 
 .company-summary .contact-info .contact-row {
   margin-bottom: 0.5em;
@@ -9723,7 +9709,7 @@ application-header .divider .wrapper .detail {
   display: flex;
   align-items: flex-start;
   gap: 1rem;
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
 }
 
