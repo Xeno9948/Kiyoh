@@ -1907,6 +1907,12 @@ header.public-header>.content {
   flex-wrap: nowrap
 }
 
+@media (max-width: 767px) {
+  header.public-header > .content {
+    justify-content: flex-start;
+  }
+}
+
 .notification-prompt,
 header.public-header .part {
   display: -webkit-box;
@@ -4173,7 +4179,9 @@ table th.full {
 .review-summary .ratings-per-division .review-title {
   margin-top: 0;
   font-weight: 700;
-  min-height: 2.5rem;
+  font-size: 2rem;
+  line-height: 2.625rem;
+  min-height: 2.625rem;
 }
 
 .review-summary .ratings-per-division .heading {
@@ -9574,11 +9582,12 @@ application-header .divider .wrapper .detail {
 
 /* Styling for the Bedrijfsoverzicht heading */
 .company-summary .review-title {
-  font-size: 2em;
+  font-size: 2rem;
+  line-height: 2.625rem;
   font-weight: 700;
   margin-bottom: 0.5em;
   margin-top: 0;
-  min-height: 2.5rem;
+  min-height: 2.625rem;
 }
 
 /* Even spacing for contact buttons */
@@ -9761,8 +9770,8 @@ header.public-header .header-button {
 
 @media (min-width: 768px) {
   header.public-header .header-button {
-    padding: 0.75rem 1.25rem;
-    font-size: 1.1rem;
+    padding: 0.85rem 1.5rem;
+    font-size: 1.2rem;
   }
 }
 
@@ -9791,6 +9800,7 @@ header.public-header .menu-toggle {
 @media (max-width: 767px) {
   header.public-header .mobile-toggle {
     display: flex;
+    margin-left: 0.5rem;
   }
   header.public-header .menu-toggle {
     display: block;
@@ -9900,9 +9910,15 @@ header.public-header .search-part {
 }
 
 @media (max-width: 767px) {
+  header.public-header .search-part .search-form {
+    width: 2.5rem;
+  }
   header.public-header .search-part input[type="search"] {
     display: none;
     max-width: 0;
+  }
+  header.public-header .search-part.expanded .search-form {
+    width: auto;
   }
   header.public-header .search-part.expanded input[type="search"] {
     display: block;
