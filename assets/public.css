@@ -9481,7 +9481,7 @@ application-header .divider .wrapper .detail {
 .summary-flex {
   display: flex;
   width: 100%;
-  max-width: 1200px;
+  max-width: 688px;
   margin-left: auto;
   margin-right: auto;
   justify-content: center;
@@ -9493,19 +9493,17 @@ application-header .divider .wrapper .detail {
 
 .summary-flex .review-summary,
 .summary-flex .company-summary {
-  flex: 1;
+  flex: 0 0 auto;
   display: flex;
   flex-direction: column;
 }
 
-/* width distribution for summary section */
+/* width distribution for summary section no longer required */
 .summary-flex .review-summary {
-  flex: 0 0 65%;
   padding-left: 0;
 }
 
 .summary-flex .company-summary {
-  flex: 0 0 35%;
 }
 
 
@@ -9900,7 +9898,7 @@ header.public-header {
 }
 
 .public-page.reviews header.public-header + .container {
-  margin-top: 7rem;
+  margin-top: 4rem;
 }
 
 header.public-header .search-part {
