@@ -1852,33 +1852,41 @@ label.checkbox input:disabled+.selector {
 }
 
 .public-page:not(.location-group) header.public-header {
-  background: #ECECEC;
+  background: rgba(255, 255, 255, 0.8);
   color: #464343;
-  padding-top: 1.5em;
-  padding-bottom: .5em
+  padding-top: 1em;
+  padding-bottom: .5em;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 
 .public-page:not(.location-group) header.public-header>.content {
-  border-bottom: 1px solid #a6a3a3;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   padding-bottom: .5em
 }
 
 .public-page.location-group header.public-header {
-  background: #fff;
+  background: rgba(255, 255, 255, 0.8);
   color: #464343;
   border-bottom: 5px solid transparent;
   padding-top: 1em;
-  padding-bottom: 1em
+  padding-bottom: 1em;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 
 header.public-header {
-  z-index: 1
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
 }
 
 header.public-header>.content {
   margin: 0 auto;
   width: 100%;
-  max-width: 1250px;
+  max-width: 1000px;
   padding-left: 16px;
   padding-right: 16px;
   display: -webkit-box;
@@ -9718,4 +9726,33 @@ application-header .divider .wrapper .detail {
   .scroll-flex .company-card {
     flex-basis: 100%;
   }
+}
+
+/* Fixed frosted header with search */
+header.public-header {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.public-page.reviews header.public-header + .container {
+  margin-top: 7rem;
+}
+
+header.public-header .search-part {
+  flex: 1 1 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header.public-header .search-part input[type="search"] {
+  width: 100%;
+  max-width: 300px;
+  padding: 0.5em 1em;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
