@@ -9749,6 +9749,16 @@ application-header .divider .wrapper .detail {
   }
 }
 
+@media (min-width: 768px) {
+  .summary-flex,
+  .scroll-flex {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+}
+
 /* Fixed frosted header with search */
 header.public-header {
   background: rgba(255, 255, 255, 0.6);
