@@ -9800,6 +9800,13 @@ header.public-header .search-form .search-icon {
   pointer-events: none;
   color: #666;
 }
+header.public-header .header-links {
+  flex: 1 1 auto;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
 
 /* Review grid layout */
 .review > .review-content {
