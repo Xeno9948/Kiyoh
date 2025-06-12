@@ -10402,18 +10402,29 @@ header.public-header .header-rating .review-count {
 
 .menu-actions {
   display: flex;
-  gap: 0.5rem;
+  gap: 1rem;
 }
 
 .menu-actions button {
-  width: 3.5rem;
-  height: 3.5rem;
+  width: 4.5rem;
+  height: 4.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 0;
   border-radius: 50%;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
+}
+
+@media (max-width: 767px) {
+  .menu-actions {
+    gap: 1.25rem;
+  }
+  .menu-actions button {
+    width: 5.5rem;
+    height: 5.5rem;
+    font-size: 1.75rem;
+  }
 }
 
 .page-share {
