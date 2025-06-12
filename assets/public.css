@@ -466,7 +466,7 @@ p {
 
 body {
   color: #464343;
-  background: #f2f2f2;
+  background: #fff;
   min-height: 100%;
   line-height: 1;
   word-wrap: break-word;
@@ -528,8 +528,8 @@ ul.real-list {
   width: 4000px;
   margin-left: -2000px;
   margin-right: -2000px;
-  background: #f2f2f2;
-  color: #f2f2f2;
+  background: #fff;
+  color: #fff;
   content: '';
   top: 0;
   bottom: 0;
@@ -10368,6 +10368,15 @@ header.public-header .header-rating .review-count {
   padding: 1rem;
 }
 
+.menu-flex {
+  max-width: 960px;
+  margin: 1rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
 .public-filter .filters-block {
   background: rgba(255, 255, 255, 0.35);
   backdrop-filter: blur(24px);
@@ -10376,15 +10385,40 @@ header.public-header .header-rating .review-count {
   border-radius: 24px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
   padding: 1rem;
-  max-width: 960px;
-  width: 100%;
-  margin: 0 auto;
+  flex: 1;
+  margin: 0;
   border-bottom: none;
 }
 
 .public-filter .filters-block h2 {
   text-align: left;
   margin-top: 0;
+}
+
+.menu-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.page-share {
+  color: #fff;
+  background: linear-gradient(to bottom right, #ff9a3e, #ff6a00);
+  font-size: 1.1rem;
+  padding: 1rem 1.5rem;
+}
+
+.page-share:hover {
+  background: linear-gradient(to bottom right, #ffa85c, #ff7e23);
+}
+
+.access-btn {
+  font-size: 1.2rem;
+  padding: 1rem 1.2rem;
+}
+
+.access-btn:active {
+  transform: translateY(0) rotate(360deg);
+  transition: transform 0.6s ease;
 }
 
 @media (max-width: 767px) {
