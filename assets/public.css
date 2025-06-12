@@ -3715,7 +3715,7 @@ table th.full {
 
 .review {
   margin: 2em 0;
-  padding: 1.5em;
+  padding: 1em;
   border-radius: 15px;
   background: rgba(255, 255, 255, 0.6);
   border: 1px solid rgba(200, 200, 200, 0.3);
@@ -3941,7 +3941,7 @@ table th.full {
 .review .moderation-response {
   white-space: pre-line;
   background-color: #ECECEC;
-  padding: 1.5em
+  padding: 1em
 }
 
 .review .moderation-response .moderation-response-header {
@@ -4126,7 +4126,7 @@ table th.full {
   align-items: center;
   text-align: center;
   margin-bottom: 1em;
-  padding: 1.5em;
+  padding: 1em;
   -webkit-box-flex: 0;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto
@@ -4167,7 +4167,7 @@ table th.full {
   -webkit-box-flex: 1;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
-  padding: 1.5em
+  padding: 1em
 }
 
 .public-login-page .page-container,
@@ -9482,7 +9482,7 @@ application-header .divider .wrapper .detail {
 .summary-flex {
   display: flex;
   width: 100%;
-  max-width: 1100px;
+  max-width: 1250px;
   margin-left: auto;
   margin-right: auto;
   justify-content: center;
@@ -10018,17 +10018,21 @@ header.public-header .header-links {
 }
 
 .response-actions button {
-  background: transparent;
-  border: 1px solid #DD6826;
-  color: #DD6826;
-  padding: 0.25em 0.75em;
-  border-radius: 4px;
-  font-weight: 600;
-  font-size: 0.875rem;
   display: inline-flex;
   align-items: center;
   gap: 0.25em;
+  padding: 0.5em 1em;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #333;
+  background: linear-gradient(to bottom right, rgba(255,255,255,0.2), rgba(255,255,255,0.05));
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 24px;
+  backdrop-filter: blur(20px) saturate(160%);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+  box-shadow: inset 0 1px 1.5px rgba(255, 255, 255, 0.4), inset 0 -1px 2px rgba(0, 0, 0, 0.15), 0 10px 20px rgba(0, 0, 0, 0.2);
   cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .response-actions button span[class^="icon-"] {
@@ -10036,7 +10040,22 @@ header.public-header .header-links {
 }
 
 .response-actions button:hover {
-  background: rgba(221, 104, 38, 0.1);
+  background: linear-gradient(to bottom right, rgba(255,255,255,0.3), rgba(255,255,255,0.1));
+  transform: translateY(-2px);
+  box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.6), inset 0 -2px 3px rgba(0, 0, 0, 0.2), 0 6px 12px rgba(0, 0, 0, 0.25);
+}
+
+.response-actions button:active {
+  transform: translateY(0);
+}
+
+.response-actions .share-button {
+  color: #fff;
+  background: linear-gradient(to bottom right, #ff9a3e, #ff6a00);
+}
+
+.response-actions .share-button:hover {
+  background: linear-gradient(to bottom right, #ffa85c, #ff7e23);
 }
 
 .response-actions .share-button .icon-share {
@@ -10172,9 +10191,9 @@ header.public-header .header-links {
 }
 footer.page-footer {
   background: rgba(255, 255, 255, 0.6);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  padding: 1rem;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 2rem 1rem;
   margin-top: 2rem;
   border-top: 1px solid rgba(0, 0, 0, 0.15);
 }
@@ -10190,17 +10209,27 @@ footer.page-footer .footer-content {
 
 footer.page-footer .search-form {
   position: relative;
+  display: flex;
+  justify-content: center;
 }
 
 footer.page-footer .search-form input[type="search"] {
   width: 100%;
-  max-width: 300px;
+  max-width: 320px;
   padding: 0.5em 1em 0.5em 2.2em;
   border-radius: 20px;
-  border: 1px solid #ccc;
-  background: rgba(255, 255, 255, 0.6);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+footer.page-footer .search-form input[type="search"]:hover,
+footer.page-footer .search-form input[type="search"]:focus {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+  transform: translateY(-2px);
 }
 
 footer.page-footer .search-form .search-icon {
