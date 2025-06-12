@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  document.querySelectorAll('.share-button').forEach(function(btn) {
+  document.querySelectorAll('.share-button, .page-share').forEach(function(btn) {
     btn.addEventListener('click', function(e) {
       e.preventDefault();
       if (navigator.share) {

@@ -10369,7 +10369,7 @@ header.public-header .header-rating .review-count {
 }
 
 .menu-flex {
-  max-width: 960px;
+  max-width: 1200px;
   margin: 1rem auto;
   display: flex;
   align-items: center;
@@ -10400,20 +10400,28 @@ header.public-header .header-rating .review-count {
   gap: 0.5rem;
 }
 
+.menu-actions button {
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border-radius: 50%;
+  font-size: 1.2rem;
+}
+
 .page-share {
   color: #fff;
   background: linear-gradient(to bottom right, #ff9a3e, #ff6a00);
-  font-size: 1.1rem;
-  padding: 1rem 1.5rem;
 }
 
 .page-share:hover {
   background: linear-gradient(to bottom right, #ffa85c, #ff7e23);
 }
 
-.access-btn {
-  font-size: 1.2rem;
-  padding: 1rem 1.2rem;
+.access-btn .fa-wheelchair {
+  color: #ff6a00;
 }
 
 .access-btn:active {
