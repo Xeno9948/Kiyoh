@@ -9902,7 +9902,8 @@ header.public-header {
 }
 
 .public-page.reviews header.public-header + .container {
-  margin-top: 4rem;
+  /* reduce top spacing so summary sits closer to the header */
+  margin-top: 2rem;
 }
 
 header.public-header .search-part {
