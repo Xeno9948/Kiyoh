@@ -9902,8 +9902,8 @@ header.public-header {
 }
 
 .public-page.reviews header.public-header + .container {
-  /* reduce top spacing so summary sits closer to the header */
-  margin-top: 2rem;
+  /* equal top and side spacing */
+  margin-top: 1rem;
 }
 
 header.public-header .search-part {
@@ -10174,14 +10174,14 @@ header.public-header .header-links {
 
 /* Reduce spacing so summaries fit above the fold */
 .public-page.reviews header.public-header + .container {
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 
 .featured-content {
-  margin-top: -1.5rem;
-  margin-bottom: 1.5rem;
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
+  margin-top: -1rem;
+  margin-bottom: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .company-summary .map-square {
