@@ -10174,7 +10174,7 @@ header.public-header .header-links {
 
 /* Reduce spacing so summaries fit above the fold */
 .public-page.reviews header.public-header + .container {
-  margin-top: 1rem;
+  margin-top: 2rem;
 }
 
 .featured-content {
