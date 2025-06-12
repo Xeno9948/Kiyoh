@@ -9491,7 +9491,7 @@ application-header .divider .wrapper .detail {
 .summary-flex {
   display: flex;
   width: 100%;
-  max-width: 1250px;
+  max-width: 960px;
   margin-left: auto;
   margin-right: auto;
   justify-content: center;
@@ -10338,5 +10338,33 @@ header.public-header .header-rating .review-count {
   }
   header.public-header .header-rating .review-count {
     text-align: right;
+    white-space: normal;
+  }
+}
+
+/* Rounded floating filter bar matching summary width */
+.filters.public-filter {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.public-filter .filters-block {
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 24px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  max-width: 960px;
+  width: 100%;
+  margin: 0 auto;
+  border-bottom: none;
+}
+
+@media (max-width: 767px) {
+  .public-filter .filters-block {
+    max-width: none;
   }
 }
