@@ -50,8 +50,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  var searchPart = document.querySelector('header.public-header .search-part');
-  if (searchPart) {
+  document.querySelectorAll('.search-part').forEach(function(searchPart) {
     var searchIcon = searchPart.querySelector('.search-icon');
     var searchInput = searchPart.querySelector('input[type="search"]');
     if (searchIcon && searchInput) {
@@ -65,6 +64,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }
       });
     }
-  }
+  });
 });
 
