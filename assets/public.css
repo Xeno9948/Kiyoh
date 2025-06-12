@@ -10085,13 +10085,13 @@ header.public-header .header-links {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
-/* Summary cards should be solid white instead of translucent */
+/* Summary cards regain frosted look with a stronger shadow */
 .summary-flex .frosted-card {
-  background: #fff;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  backdrop-filter: none;
-  -webkit-backdrop-filter: none;
+  background: rgba(255, 255, 255, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
 }
 
 .frosted-card h2 {
