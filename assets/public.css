@@ -466,7 +466,7 @@ p {
 
 body {
   color: #464343;
-  background: #fff;
+  background: #f2f2f2;
   min-height: 100%;
   line-height: 1;
   word-wrap: break-word;
@@ -528,8 +528,8 @@ ul.real-list {
   width: 4000px;
   margin-left: -2000px;
   margin-right: -2000px;
-  background: #ffffff;
-  color: #ffffff;
+  background: #f2f2f2;
+  color: #f2f2f2;
   content: '';
   top: 0;
   bottom: 0;
@@ -10340,6 +10340,16 @@ header.public-header .header-rating .review-count {
     text-align: right;
     white-space: normal;
   }
+  header.public-header .header-rating .average-rating-number-container {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+  header.public-header .header-rating .average-rating-number-container > .rating {
+    font-size: 1.25rem;
+  }
+  header.public-header .portal-logo img {
+    max-width: 9em;
+  }
 }
 
 /* Rounded floating filter bar matching summary width */
@@ -10361,6 +10371,11 @@ header.public-header .header-rating .review-count {
   width: 100%;
   margin: 0 auto;
   border-bottom: none;
+}
+
+.public-filter .filters-block h2 {
+  text-align: right;
+  margin-top: 0;
 }
 
 @media (max-width: 767px) {
