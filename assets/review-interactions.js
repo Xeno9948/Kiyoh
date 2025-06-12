@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  document.querySelectorAll('.share-button').forEach(function(btn) {
+  document.querySelectorAll('.share-button, .page-share').forEach(function(btn) {
     btn.addEventListener('click', function(e) {
       e.preventDefault();
       if (navigator.share) {
@@ -39,6 +39,13 @@ document.addEventListener('DOMContentLoaded', function () {
       } else if (navigator.clipboard) {
         navigator.clipboard.writeText(location.href);
       }
+    });
+  });
+
+  document.querySelectorAll('.access-btn').forEach(function(btn) {
+    btn.addEventListener('click', function(e) {
+      e.preventDefault();
+      document.body.classList.toggle('invert-colors');
     });
   });
 
@@ -50,8 +57,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  var searchPart = document.querySelector('header.public-header .search-part');
-  if (searchPart) {
+  document.querySelectorAll('.search-part').forEach(function(searchPart) {
     var searchIcon = searchPart.querySelector('.search-icon');
     var searchInput = searchPart.querySelector('input[type="search"]');
     if (searchIcon && searchInput) {
@@ -65,6 +71,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }
       });
     }
-  }
+  });
 });
 

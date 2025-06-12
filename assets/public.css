@@ -528,8 +528,8 @@ ul.real-list {
   width: 4000px;
   margin-left: -2000px;
   margin-right: -2000px;
-  background: #ffffff;
-  color: #ffffff;
+  background: #fff;
+  color: #fff;
   content: '';
   top: 0;
   bottom: 0;
@@ -546,10 +546,10 @@ ul.real-list {
 
 .featured-content {
   position: relative;
-  margin-top: -2.5rem;
-  margin-bottom: 2.5rem;
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem
+  margin-top: -1rem;
+  margin-bottom: 2rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
 }
 
 .featured-content:before {
@@ -1862,7 +1862,7 @@ label.checkbox input:disabled+.selector {
 }
 
 .public-page:not(.location-group) header.public-header>.content {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: none;
   padding-bottom: .5em
 }
 
@@ -3715,7 +3715,7 @@ table th.full {
 
 .review {
   margin: 2em 0;
-  padding: 1.5em;
+  padding: 1em;
   border-radius: 15px;
   background: rgba(255, 255, 255, 0.6);
   border: 1px solid rgba(200, 200, 200, 0.3);
@@ -3941,7 +3941,7 @@ table th.full {
 .review .moderation-response {
   white-space: pre-line;
   background-color: #ECECEC;
-  padding: 1.5em
+  padding: 1em
 }
 
 .review .moderation-response .moderation-response-header {
@@ -4126,7 +4126,7 @@ table th.full {
   align-items: center;
   text-align: center;
   margin-bottom: 1em;
-  padding: 1.5em;
+  padding: 1em;
   -webkit-box-flex: 0;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto
@@ -4167,7 +4167,7 @@ table th.full {
   -webkit-box-flex: 1;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
-  padding: 1.5em
+  padding: 1em
 }
 
 .public-login-page .page-container,
@@ -4194,6 +4194,15 @@ table th.full {
 .review-summary .ratings-per-division .add-review {
   margin-top: auto;
   margin-left: auto
+}
+
+@media (max-width: 767px) {
+  .review-summary .ratings-per-division .add-review {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 100%;
+  }
 }
 
 .review-summary .ratings-per-division .add-review>button,
@@ -10018,17 +10027,21 @@ header.public-header .header-links {
 }
 
 .response-actions button {
-  background: transparent;
-  border: 1px solid #DD6826;
-  color: #DD6826;
-  padding: 0.25em 0.75em;
-  border-radius: 4px;
-  font-weight: 600;
-  font-size: 0.875rem;
   display: inline-flex;
   align-items: center;
   gap: 0.25em;
+  padding: 0.5em 1em;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #333;
+  background: linear-gradient(to bottom right, rgba(255,255,255,0.2), rgba(255,255,255,0.05));
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 24px;
+  backdrop-filter: blur(20px) saturate(160%);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+  box-shadow: inset 0 1px 1.5px rgba(255, 255, 255, 0.4), inset 0 -1px 2px rgba(0, 0, 0, 0.15), 0 10px 20px rgba(0, 0, 0, 0.2);
   cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .response-actions button span[class^="icon-"] {
@@ -10036,7 +10049,22 @@ header.public-header .header-links {
 }
 
 .response-actions button:hover {
-  background: rgba(221, 104, 38, 0.1);
+  background: linear-gradient(to bottom right, rgba(255,255,255,0.3), rgba(255,255,255,0.1));
+  transform: translateY(-2px);
+  box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.6), inset 0 -2px 3px rgba(0, 0, 0, 0.2), 0 6px 12px rgba(0, 0, 0, 0.25);
+}
+
+.response-actions button:active {
+  transform: translateY(0);
+}
+
+.response-actions .share-button {
+  color: #fff;
+  background: linear-gradient(to bottom right, #ff9a3e, #ff6a00);
+}
+
+.response-actions .share-button:hover {
+  background: linear-gradient(to bottom right, #ffa85c, #ff7e23);
 }
 
 .response-actions .share-button .icon-share {
@@ -10055,6 +10083,15 @@ header.public-header .header-links {
   color: #000;
   width: 100%;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Summary cards should be solid white instead of translucent */
+.summary-flex .frosted-card {
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
 }
 
 .frosted-card h2 {
@@ -10083,11 +10120,11 @@ header.public-header .header-links {
   background: linear-gradient(to bottom right, rgba(255,255,255,0.2), rgba(255,255,255,0.05));
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 24px;
-  padding: 0.75rem 1.5rem;
+  padding: 1rem 1.75rem;
   font-weight: bold;
   text-align: center;
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 1.1rem;
   cursor: pointer;
   box-shadow:
     inset 0 1px 1.5px rgba(255, 255, 255, 0.4),
@@ -10154,8 +10191,8 @@ header.public-header .header-links {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  padding: 0.75rem;
-  font-size: 1rem;
+  padding: 1rem;
+  font-size: 1.1rem;
 }
 .company-summary .contact-actions .secondary-buttons {
   display: flex;
@@ -10167,6 +10204,250 @@ header.public-header .header-links {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0.75rem 0;
-  font-size: 1rem;
+  padding: 0.9rem 0;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 767px) {
+  .company-summary .contact-actions .website-btn {
+    padding: 1.25rem;
+    font-size: 1.25rem;
+  }
+  .company-summary .contact-actions .secondary-buttons a {
+    padding: 1.1rem 0;
+    font-size: 1.25rem;
+  }
+}
+footer.page-footer {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 2rem 1rem;
+  margin-top: 2rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+footer.page-footer .footer-content {
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+footer.page-footer .search-form {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+footer.page-footer .search-form input[type="search"] {
+  width: 100%;
+  max-width: 320px;
+  padding: 0.5em 1em 0.5em 2.2em;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+footer.page-footer .search-form input[type="search"]:hover,
+footer.page-footer .search-form input[type="search"]:focus {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+  transform: translateY(-2px);
+}
+
+footer.page-footer .search-form .search-icon {
+  position: absolute;
+  left: 0.8em;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #666;
+}
+
+footer.page-footer .footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+  align-items: center;
+}
+
+footer.page-footer .footer-home {
+  font-weight: 600;
+  text-decoration: none;
+  color: #333;
+  padding: 0.5rem 1rem;
+}
+
+footer.page-footer .header-button {
+  background: rgba(255, 255, 255, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.65);
+  border-radius: 16px;
+  color: #333;
+  padding: 0.6rem 1.2rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+@media (min-width: 768px) {
+  footer.page-footer .header-button {
+    padding: 0.7rem 1.4rem;
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 767px) {
+  footer.page-footer .header-button {
+    padding: 1rem 1.6rem;
+    font-size: 1.25rem;
+  }
+}
+
+footer.page-footer .header-button:hover {
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transform: translateY(-1px);
+}
+
+footer.page-footer .header-button:active {
+  transform: scale(0.98);
+}
+
+header.public-header .header-rating .average-rating-number-container {
+  width: 4.5rem;
+  height: 4.5rem;
+}
+
+header.public-header .header-rating .average-rating-number-container > .rating {
+  font-size: 1.5rem;
+}
+
+header.public-header .header-rating .review-count {
+  font-size: 0.9rem;
+  white-space: nowrap;
+  margin: 0 0.5em;
+}
+
+@media (max-width: 767px) {
+  header.public-header .header-rating {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+  }
+  header.public-header .header-rating .review-count {
+    text-align: right;
+    white-space: normal;
+  }
+  header.public-header .header-rating .average-rating-number-container {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+  header.public-header .header-rating .average-rating-number-container > .rating {
+    font-size: 1.25rem;
+  }
+  header.public-header .portal-logo img {
+    max-width: 9em;
+  }
+}
+
+/* Rounded floating filter bar matching summary width */
+.filters.public-filter {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.menu-flex {
+  max-width: 1200px;
+  margin: 1rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.menu-flex .public-filter {
+  flex: 0 0 65%;
+  max-width: 65%;
+}
+
+.public-filter .filters-block {
+  background: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 24px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  flex: 1;
+  margin: 0;
+  border-bottom: none;
+}
+
+.public-filter .filters-block h2 {
+  text-align: left;
+  margin-top: 0;
+}
+
+.menu-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.menu-actions button {
+  width: 3.5rem;
+  height: 3.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border-radius: 50%;
+  font-size: 1.2rem;
+}
+
+.page-share {
+  color: #fff;
+  background: linear-gradient(to bottom right, #ff9a3e, #ff6a00);
+}
+
+.page-share:hover {
+  background: linear-gradient(to bottom right, #ffa85c, #ff7e23);
+}
+
+.access-btn .fa-wheelchair {
+  color: #ff6a00;
+}
+
+.access-btn:active {
+  transform: translateY(0) rotate(360deg);
+  transition: transform 0.6s ease;
+}
+
+@media (max-width: 767px) {
+  .public-filter .filters-block {
+    max-width: none;
+  }
+  .menu-flex .public-filter {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+}
+
+body.invert-colors {
+  filter: invert(1) hue-rotate(180deg);
+}
+
+body.invert-colors img {
+  filter: invert(1) hue-rotate(180deg);
 }

@@ -58,25 +58,11 @@
         <img src="assets/tenant-logo.svg" />
       </div>
     </div>
-      <div class="part search-part">
-        <form class="search-form" action="https://www.kiyoh.cm/reviews" method="get">
-          <span class="icon-search search-icon"></span>
-          <input type="search" name="q" placeholder="zoek een bedrijf" />
-        </form>
+    <div bis_skin_checked="1" class="part header-rating">
+      <div class="average-rating-number-container">
+        <span class="rating">8,9</span>
       </div>
-      <div class="part mobile-toggle">
-        <button class="menu-toggle" aria-label="Menu"><span class="fa fa-bars" aria-hidden="true"></span></button>
-      </div>
-      <div class="part header-links">
-        <a href="https://www.kiyoh.com/privacy" target="_blank" rel="noopener">
-          <button class="header-button">Privacy</button>
-        </a>
-      <a href="https://www.kiyoh.com/faq-2" target="_blank" rel="noopener">
-        <button class="header-button">FAQ</button>
-      </a>
-      <a href="https://www.kiyoh.com/google-review-partner-wat-betekent-dit-voor-jouw-bedrijf/" target="_blank" rel="noopener">
-        <button class="header-button">Google Review Partner</button>
-      </a>
+      <span class="review-count">gebaseerd op 1,372 beoordelingen</span>
     </div>
     <div bis_skin_checked="1" class="part">
       <div bis_skin_checked="1" class="language-switcher js-language-selector">
@@ -343,8 +329,8 @@
           <h2 class="review-title">Bedrijfsoverzicht</h2>
         </div>
         <div class="contact-info">
-          <h3>Contact & Openingstijden</h3>
-            <div class="contact-flex">
+          <h3>Contact</h3>
+          <div class="contact-flex">
               <div class="contact-actions" aria-label="Contact opties">
                 <a href="https://www.kiyoh.com/" target="_blank" aria-label="Website" class="skeuo-glass website-btn"><span class="fa fa-globe" aria-hidden="true"></span> bezoek website</a>
                 <div class="secondary-buttons">
@@ -352,20 +338,84 @@
                   <a href="mailto:info@kiyoh.com" aria-label="Email" class="skeuo-glass"><span class="fa fa-envelope" aria-hidden="true"></span></a>
                 </div>
               </div>
-            <div class="opening-hours">
-              <strong>Openingstijden:</strong>
-              <ul>
-                <li>Ma - Vr: 09:00 - 17:00</li>
-                <li>Za - Zo: Gesloten</li>
-              </ul>
             </div>
           </div>
-        </div>
       </div>
     </div>
   </div>
-  <div bis_skin_checked="1" class="public-filter js-public-filters component">
-    <div class="filters"></div>
+  <div class="menu-flex">
+    <div class="filters public-filter js-public-filters component">
+      <div class="filters-block">
+      <h2><b>Filters</b></h2>
+      <ul>
+        <li class="filter-stars">
+          <div class="rating-stars active-rating-stars js-rating-stars">
+            <span class="icon-star-o js-star"></span>
+            <span class="icon-star-o js-star"></span>
+            <span class="icon-star-o js-star"></span>
+            <span class="icon-star-o js-star"></span>
+            <span class="icon-star-o js-star"></span>
+          </div>
+        </li>
+        <li>
+          <div class="ui-select">
+            <select class="js-sorting-fields">
+              <option value="DATE_DESC" selected>Datum (nieuw - oud)</option>
+              <option value="SCORE_ASC">Score (laag - hoog)</option>
+              <option value="SCORE_DESC">Score (hoog - laag)</option>
+              <option value="DATE_ASC">Datum (oud - nieuw)</option>
+            </select>
+          </div>
+        </li>
+        <li>
+          <div class="ui-select">
+            <select class="js-language-filter" name="filterLocale">
+              <option value="">Toon alle talen</option>
+              <option value="en"> English </option>
+              <option value="nl"> Nederlands </option>
+              <option value="fi-FI"> Suomalainen </option>
+              <option value="fr"> Français </option>
+              <option value="be"> Vlaams </option>
+              <option value="de"> German </option>
+              <option value="hu"> Hungarian </option>
+              <option value="bg"> Bulgarian </option>
+              <option value="ro"> Romanian </option>
+              <option value="hr"> Croatian </option>
+              <option value="ja"> Japanese </option>
+              <option value="es-ES"> Spanish </option>
+              <option value="it"> Italian </option>
+              <option value="pt-PT"> Portuguese </option>
+              <option value="tr"> Turkish </option>
+              <option value="nn-NO"> Norwegian </option>
+              <option value="sv-SE"> Swedish </option>
+              <option value="da"> Danish </option>
+              <option value="pt-BR"> Brazilian Portuguese </option>
+              <option value="pl"> Polish </option>
+              <option value="sl"> Slovenian </option>
+              <option value="zh-CN"> Chinese </option>
+              <option value="ru"> Russian </option>
+              <option value="el"> Greek </option>
+              <option value="cs"> Czech </option>
+              <option value="et"> Estonian </option>
+              <option value="lt"> Lithuanian </option>
+              <option value="lv"> Latvian </option>
+              <option value="sk"> Slovak </option>
+            </select>
+          </div>
+        </li>
+        <li class="filter-buttons">
+          <div class="button-container">
+            <button class="secondary skeuo-glass shrink js-filter-button"><span class="fa fa-filter" aria-hidden="true"></span> Toepassen</button>
+            <button class="primary skeuo-glass js-clear-button"><span class="fa fa-refresh" aria-hidden="true"></span> Reset</button>
+          </div>
+        </li>
+      </ul>
+      </div>
+    </div>
+    <div class="menu-actions">
+      <button class="page-share skeuo-glass" aria-label="Deel reviewpagina"><span class="fa fa-share-alt" aria-hidden="true"></span></button>
+      <button class="access-btn skeuo-glass" aria-label="Toegankelijkheid"><span class="fa fa-wheelchair" aria-hidden="true"></span></button>
+    </div>
   </div>
   <div class="scroll-flex">
     <div class="company-card">
@@ -554,8 +604,8 @@
                 </div>
               </div>
             <div class="response-actions">
-                      <button class="toggle-response"><span class="icon-reply"></span> antwoord bedrijf</button>
-                      <button class="share-button"><span class="icon-share"></span> delen</button>
+                      <button class="toggle-response skeuo-glass"><span class="icon-reply"></span> antwoord bedrijf</button>
+                      <button class="share-button skeuo-glass"><span class="icon-share"></span> delen</button>
                     </div>
 </div>
                     
@@ -638,7 +688,7 @@
                 </div>
               </div>
             <div class="response-actions">
-                      <button class="share-button"><span class="icon-share"></span> delen</button>
+                      <button class="share-button skeuo-glass"><span class="icon-share"></span> delen</button>
                     </div>
 </div>
                     
@@ -720,7 +770,7 @@
                 </div>
               </div>
             <div class="response-actions">
-                      <button class="share-button"><span class="icon-share"></span> delen</button>
+                      <button class="share-button skeuo-glass"><span class="icon-share"></span> delen</button>
                     </div>
 </div>
                     
@@ -802,7 +852,7 @@
                 </div>
               </div>
             <div class="response-actions">
-                      <button class="share-button"><span class="icon-share"></span> delen</button>
+                      <button class="share-button skeuo-glass"><span class="icon-share"></span> delen</button>
                     </div>
 </div>
                     
@@ -885,7 +935,7 @@
                 </div>
               </div>
             <div class="response-actions">
-                      <button class="share-button"><span class="icon-share"></span> delen</button>
+                      <button class="share-button skeuo-glass"><span class="icon-share"></span> delen</button>
                     </div>
 </div>
                     
@@ -969,7 +1019,7 @@
                 </div>
               </div>
             <div class="response-actions">
-                      <button class="share-button"><span class="icon-share"></span> delen</button>
+                      <button class="share-button skeuo-glass"><span class="icon-share"></span> delen</button>
                     </div>
 </div>
                     
@@ -1052,7 +1102,7 @@
                 </div>
               </div>
             <div class="response-actions">
-                      <button class="share-button"><span class="icon-share"></span> delen</button>
+                      <button class="share-button skeuo-glass"><span class="icon-share"></span> delen</button>
                     </div>
 </div>
                     
@@ -1134,7 +1184,7 @@
                 </div>
               </div>
             <div class="response-actions">
-                      <button class="share-button"><span class="icon-share"></span> delen</button>
+                      <button class="share-button skeuo-glass"><span class="icon-share"></span> delen</button>
                     </div>
 </div>
                     
@@ -1216,7 +1266,7 @@
                 </div>
               </div>
             <div class="response-actions">
-                      <button class="share-button"><span class="icon-share"></span> delen</button>
+                      <button class="share-button skeuo-glass"><span class="icon-share"></span> delen</button>
                     </div>
 </div>
                     
@@ -1300,7 +1350,7 @@
                 </div>
               </div>
             <div class="response-actions">
-                      <button class="share-button"><span class="icon-share"></span> delen</button>
+                      <button class="share-button skeuo-glass"><span class="icon-share"></span> delen</button>
                     </div>
 </div>
                     
@@ -1383,7 +1433,7 @@
                 </div>
               </div>
             <div class="response-actions">
-                      <button class="share-button"><span class="icon-share"></span> delen</button>
+                      <button class="share-button skeuo-glass"><span class="icon-share"></span> delen</button>
                     </div>
 </div>
                     
@@ -1466,7 +1516,7 @@
                 </div>
               </div>
             <div class="response-actions">
-                      <button class="share-button"><span class="icon-share"></span> delen</button>
+                      <button class="share-button skeuo-glass"><span class="icon-share"></span> delen</button>
                     </div>
 </div>
                     
@@ -1549,7 +1599,7 @@
                 </div>
               </div>
             <div class="response-actions">
-                      <button class="share-button"><span class="icon-share"></span> delen</button>
+                      <button class="share-button skeuo-glass"><span class="icon-share"></span> delen</button>
                     </div>
 </div>
                     
@@ -1631,7 +1681,7 @@
                 </div>
               </div>
             <div class="response-actions">
-                      <button class="share-button"><span class="icon-share"></span> delen</button>
+                      <button class="share-button skeuo-glass"><span class="icon-share"></span> delen</button>
                     </div>
 </div>
                     
@@ -1717,8 +1767,8 @@
                         </div>
                       </div>
                     <div class="response-actions">
-                      <button class="toggle-response"><span class="icon-reply"></span> antwoord bedrijf</button>
-                      <button class="share-button"><span class="icon-share"></span> delen</button>
+                      <button class="toggle-response skeuo-glass"><span class="icon-reply"></span> antwoord bedrijf</button>
+                      <button class="share-button skeuo-glass"><span class="icon-share"></span> delen</button>
                     </div>
 </div>
                     
@@ -1823,7 +1873,7 @@
                 </div>
               </div>
             <div class="response-actions">
-                      <button class="share-button"><span class="icon-share"></span> delen</button>
+                      <button class="share-button skeuo-glass"><span class="icon-share"></span> delen</button>
                     </div>
 </div>
                     
@@ -1895,7 +1945,7 @@
                 </div>
               </div>
             <div class="response-actions">
-                      <button class="share-button"><span class="icon-share"></span> delen</button>
+                      <button class="share-button skeuo-glass"><span class="icon-share"></span> delen</button>
                     </div>
 </div>
                     
@@ -1984,7 +2034,7 @@
                 </div>
               </div>
             <div class="response-actions">
-                      <button class="share-button"><span class="icon-share"></span> delen</button>
+                      <button class="share-button skeuo-glass"><span class="icon-share"></span> delen</button>
                     </div>
 </div>
                     
@@ -2066,7 +2116,7 @@
                 </div>
               </div>
             <div class="response-actions">
-                      <button class="share-button"><span class="icon-share"></span> delen</button>
+                      <button class="share-button skeuo-glass"><span class="icon-share"></span> delen</button>
                     </div>
 </div>
                     
@@ -2153,7 +2203,7 @@
               </div>
             </div>
   <div class="response-actions">
-                      <button class="share-button"><span class="icon-share"></span> delen</button>
+                      <button class="share-button skeuo-glass"><span class="icon-share"></span> delen</button>
                     </div>
 </div>
                     
@@ -3040,6 +3090,20 @@
       kv.initFilters();
       kv.initToolTip();
     </script>
+<footer class="page-footer">
+  <div class="footer-content">
+    <form class="search-form" action="https://www.kiyoh.cm/reviews" method="get">
+      <span class="icon-search search-icon"></span>
+      <input type="search" name="q" placeholder="zoek een bedrijf" />
+    </form>
+    <div class="footer-links">
+      <a href="https://www.kiyoh.com" class="footer-home">kiyoh.com</a>
+      <a href="https://www.kiyoh.com/privacy" target="_blank" rel="noopener"><button class="header-button">Privacy</button></a>
+      <a href="https://www.kiyoh.com/faq-2" target="_blank" rel="noopener"><button class="header-button">FAQ</button></a>
+      <a href="https://www.kiyoh.com/google-review-partner-wat-betekent-dit-voor-jouw-bedrijf/" target="_blank" rel="noopener"><button class="header-button">Google Review Partner</button></a>
+    </div>
+  </div>
+</footer>
   </body>
 
 </html>
