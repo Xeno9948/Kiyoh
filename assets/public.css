@@ -9482,7 +9482,7 @@ application-header .divider .wrapper .detail {
 .summary-flex {
   display: flex;
   width: 100%;
-  max-width: 1200px;
+  max-width: 960px;
   margin-left: auto;
   margin-right: auto;
   justify-content: center;
@@ -10176,12 +10176,13 @@ footer.page-footer {
   -webkit-backdrop-filter: blur(8px);
   padding: 1rem;
   margin-top: 2rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.15);
 }
 
 footer.page-footer .footer-content {
   max-width: 100%;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 1rem;
@@ -10255,4 +10256,13 @@ footer.page-footer .header-button:hover {
 
 footer.page-footer .header-button:active {
   transform: scale(0.98);
+}
+
+header.public-header .header-rating .average-rating-number-container {
+  width: 4.5rem;
+  height: 4.5rem;
+}
+
+header.public-header .header-rating .average-rating-number-container > .rating {
+  font-size: 1.5rem;
 }
