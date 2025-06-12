@@ -4093,7 +4093,7 @@ table th.full {
   .review-summary {
     display: inline-block;
     vertical-align: top;
-    margin: 2em;
+    margin: 1em;
   }
   .public-page .splitted-view {
     display: flex;
@@ -4111,7 +4111,7 @@ table th.full {
   .company-summary,
   .review-summary {
     display: block;
-    margin: 1.5em auto;
+    margin: 1em auto;
     width: 100%;
     max-width: 100%;
   }
@@ -4125,8 +4125,8 @@ table th.full {
   -ms-flex-align: center;
   align-items: center;
   text-align: center;
-  margin-bottom: 2em;
-  padding: 2.5em;
+  margin-bottom: 1em;
+  padding: 1.5em;
   -webkit-box-flex: 0;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto
@@ -9482,7 +9482,7 @@ application-header .divider .wrapper .detail {
 .summary-flex {
   display: flex;
   width: 100%;
-  max-width: 1020px;
+  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
   justify-content: center;
@@ -9570,8 +9570,8 @@ application-header .divider .wrapper .detail {
 
 /* Square map styling */
 .company-summary .map-square {
-  width: 18em;
-  height: 18em;
+  width: 14em;
+  height: 14em;
   max-width: 100%;
   border-radius: 0.75rem;
   overflow: hidden;
