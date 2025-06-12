@@ -9495,19 +9495,15 @@ application-header .divider .wrapper .detail {
 
 .summary-flex .review-summary,
 .summary-flex .company-summary {
-  flex: 1;
   display: flex;
   flex-direction: column;
 }
 
-/* width distribution for summary section */
-.summary-flex .review-summary {
-  padding-left: 0;
-  flex: 0 0 65%;
-}
-
+/* card sizing */
+.summary-flex .review-summary,
 .summary-flex .company-summary {
-  flex: 0 0 35%;
+  flex: 0 0 auto;
+  padding-left: 0;
 }
 
 
@@ -9603,28 +9599,6 @@ application-header .divider .wrapper .detail {
 }
 
 /* Buttons row styling */
-.company-summary .contact-buttons {
-  display: flex;
-  width: 100%;
-  justify-content: space-around;
-  margin-bottom: 1rem;
-}
-
-.company-summary .contact-buttons a {
-  flex: 1;
-  text-align: center;
-}
-
-.company-summary .contact-buttons button {
-  width: 100%;
-  padding-top: 18px;
-  padding-bottom: 18px;
-  font-size: 14px;
-}
-
-.company-summary .contact-buttons button .fa {
-  font-size: 1.2em;
-}
 
 .company-summary .opening-hours ul {
   list-style: none;
@@ -9902,9 +9876,7 @@ header.public-header {
 }
 
 .public-page.reviews header.public-header + .container {
-  /* equal top and side spacing */
-  margin-top: 1rem;
-  padding-top: 0;
+  margin-top: 2rem;
 }
 
 header.public-header .search-part {
@@ -10047,15 +10019,15 @@ header.public-header .header-links {
 
 /* Frosted glass card styling for summaries */
 .frosted-card {
-  background: rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.12);
   border-radius: 24px;
-  padding: 1.5rem;
-  backdrop-filter: blur(30px);
-  -webkit-backdrop-filter: blur(30px);
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  padding: 2rem;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
   color: #000;
-  width: 100%;
+  width: 320px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
@@ -10074,114 +10046,44 @@ header.public-header .header-links {
   line-height: 1.5;
 }
 
-/* Apple iOS-style liquid glass effect:
-   - frosted translucent surface
-   - backdrop blur + saturation
-   - subtle border + shadow for depth
-*/
 .frosted-card .cta-button {
   display: inline-block;
-  color: #f90;
-  background: linear-gradient(to bottom right, rgba(255,255,255,0.2), rgba(255,255,255,0.05));
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 24px;
+  background-color: #f90;
+  color: white;
+  border: none;
+  border-radius: 12px;
   padding: 0.75rem 1.5rem;
   font-weight: bold;
   text-align: center;
   text-decoration: none;
   font-size: 1rem;
   cursor: pointer;
-  box-shadow:
-    inset 0 1px 1.5px rgba(255, 255, 255, 0.4),
-    inset 0 -1px 2px rgba(0, 0, 0, 0.15),
-    0 10px 20px rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(20px) saturate(160%);
-  -webkit-backdrop-filter: blur(20px) saturate(160%);
-  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  transition: background 0.3s ease;
 }
 
 .frosted-card .cta-button:hover {
-  background: linear-gradient(to bottom right, rgba(255,255,255,0.3), rgba(255,255,255,0.1));
-  transform: translateY(-2px);
-  box-shadow:
-    inset 0 1px 2px rgba(255, 255, 255, 0.6),
-    inset 0 -2px 3px rgba(0, 0, 0, 0.2),
-    0 6px 12px rgba(0, 0, 0, 0.25);
+  background-color: #e08000;
 }
 
-.frosted-card .cta-button:active {
-  transform: translateY(0);
-}
-
-/* Skeuomorphic liquid glass button style */
-.skeuo-glass {
-  backdrop-filter: blur(20px) saturate(160%);
-  -webkit-backdrop-filter: blur(20px) saturate(160%);
-  background: linear-gradient(to bottom right, rgba(255,255,255,0.2), rgba(255,255,255,0.05));
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 24px;
-  box-shadow:
-    inset 0 1px 1.5px rgba(255, 255, 255, 0.4),
-    inset 0 -1px 2px rgba(0, 0, 0, 0.15),
-    0 10px 20px rgba(0, 0, 0, 0.2);
-  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.skeuo-glass:hover {
-  background: linear-gradient(to bottom right, rgba(255,255,255,0.3), rgba(255,255,255,0.1));
-  transform: translateY(-2px);
-  box-shadow:
-    inset 0 1px 2px rgba(255, 255, 255, 0.6),
-    inset 0 -2px 3px rgba(0, 0, 0, 0.2),
-    0 6px 12px rgba(0, 0, 0, 0.25);
-}
-
-.skeuo-glass:active {
-  transform: translateY(0);
-}
-
-
-
-/* Contact action layout */
-.company-summary .contact-actions {
+.frosted-icons {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  gap: 0.75rem;
+  justify-content: space-around;
+  margin-top: 1rem;
 }
-.company-summary .contact-actions .website-btn {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
+
+.frosted-icons button {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-radius: 50%;
   padding: 0.75rem;
-  font-size: 1rem;
-}
-.company-summary .contact-actions .secondary-buttons {
-  display: flex;
-  width: 100%;
-  gap: 0.75rem;
-}
-.company-summary .contact-actions .secondary-buttons a {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.75rem 0;
-  font-size: 1rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
 }
 
-.featured-content {
-  margin-top: 0;
-  margin-bottom: 1rem;
-  padding-top: 0;
-  padding-bottom: 1rem;
+.frosted-icons button:hover {
+  background: rgba(255, 255, 255, 0.3);
 }
 
-.company-summary .map-square {
-  width: 16em;
-  height: 16em;
-  margin: 1rem auto 0.75rem;
-}
