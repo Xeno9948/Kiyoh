@@ -9904,6 +9904,7 @@ header.public-header {
 .public-page.reviews header.public-header + .container {
   /* equal top and side spacing */
   margin-top: 1rem;
+  padding-top: 0;
 }
 
 header.public-header .search-part {
@@ -10173,14 +10174,16 @@ header.public-header .header-links {
 }
 
 /* Reduce spacing so summaries fit above the fold */
+
 .public-page.reviews header.public-header + .container {
   margin-top: 1rem;
+  padding-top: 0;
 }
 
 .featured-content {
-  margin-top: -1rem;
+  margin-top: 0;
   margin-bottom: 1rem;
-  padding-top: 1rem;
+  padding-top: 0;
   padding-bottom: 1rem;
 }
 
