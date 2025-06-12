@@ -10173,13 +10173,6 @@ header.public-header .header-links {
   font-size: 1rem;
 }
 
-/* Reduce spacing so summaries fit above the fold */
-
-.public-page.reviews header.public-header + .container {
-  margin-top: 1rem;
-  padding-top: 0;
-}
-
 .featured-content {
   margin-top: 0;
   margin-bottom: 1rem;
