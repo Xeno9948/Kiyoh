@@ -10048,7 +10048,7 @@ header.public-header .header-links {
 .frosted-card {
   background: rgba(255, 255, 255, 0.25);
   border-radius: 24px;
-  padding: 2rem;
+  padding: 1.5rem;
   backdrop-filter: blur(30px);
   -webkit-backdrop-filter: blur(30px);
   border: 1px solid rgba(255, 255, 255, 0.4);
@@ -10170,4 +10170,22 @@ header.public-header .header-links {
   justify-content: center;
   padding: 0.75rem 0;
   font-size: 1rem;
+}
+
+/* Reduce spacing so summaries fit above the fold */
+.public-page.reviews header.public-header + .container {
+  margin-top: 1rem;
+}
+
+.featured-content {
+  margin-top: -1.5rem;
+  margin-bottom: 1.5rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.company-summary .map-square {
+  width: 16em;
+  height: 16em;
+  margin: 1rem auto 0.75rem;
 }
