@@ -3428,7 +3428,8 @@ review-filters .filters {
   width: 100%;
   text-align: center;
   margin-top: -.5em;
-  z-index: 1
+  z-index: 1;
+  font-family: Gotham, Arial, sans-serif;
 }
 
 .average-rating-number-container {
@@ -3454,6 +3455,11 @@ review-filters .filters {
   margin: -.55em 0 0 -.04em;
   letter-spacing: -.05em;
   text-align: center
+}
+
+/* Ensure all numeric ratings use Gotham */
+.rating {
+  font-family: Gotham, Arial, sans-serif;
 }
 
 .footer-bottom-col,
@@ -3683,7 +3689,8 @@ review-filters .ui-select {
   -webkit-box-flex: 0;
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
-  width: 6.6em
+  width: 6.6em;
+  font-family: Gotham, Arial, sans-serif;
 }
 
 @media only screen and (min-width:1024px) {
@@ -9876,6 +9883,7 @@ header.public-header .menu-toggle {
 .scroll-flex .reviewlist .review {
   width: 100%;
   box-sizing: border-box;
+  padding-left: 0;
 }
 
 .scroll-flex .company-column {
