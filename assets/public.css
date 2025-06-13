@@ -4144,7 +4144,8 @@ table th.full {
 }
 
 .review-summary .overall-rating .rating-stars [class^=icon-star] {
-  font-size: 1.9em
+  font-size: 2.3em;
+  color: #FFB612;
 }
 
 .review-summary .overall-rating .summary {
@@ -9870,6 +9871,7 @@ header.public-header .menu-toggle {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  margin-top: 0;
 }
 
 .company-card {
@@ -10371,12 +10373,12 @@ header.public-header .header-rating .review-count {
 .filters.public-filter {
   display: flex;
   justify-content: center;
-  padding: 1rem;
+  padding: 0.5rem 1rem;
 }
 
 .menu-flex {
   max-width: 1200px;
-  margin: 0.25rem auto;
+  margin: 0.5rem auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
