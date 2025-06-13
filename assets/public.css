@@ -10494,10 +10494,10 @@ header.public-header .header-rating .review-count {
   }
 }
 
-body.invert-colors {
-  filter: invert(1) hue-rotate(180deg);
+body.high-contrast {
+  filter: contrast(1.5) brightness(1.1) saturate(1.2);
 }
 
-body.invert-colors img {
-  filter: invert(1) hue-rotate(180deg);
+body.high-contrast img {
+  filter: contrast(1.5) brightness(1.1) saturate(1.2);
 }
