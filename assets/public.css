@@ -10494,10 +10494,29 @@ header.public-header .header-rating .review-count {
   }
 }
 
-body.high-contrast {
-  filter: contrast(1.5) brightness(1.1) saturate(1.2);
+/* Dark mode styles toggled via the accessibility button */
+body.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
 }
 
-body.high-contrast img {
-  filter: contrast(1.5) brightness(1.1) saturate(1.2);
+body.dark-mode img {
+  filter: brightness(0.9) contrast(1.1);
+}
+
+body.dark-mode header.public-header,
+body.dark-mode .menu-flex,
+body.dark-mode footer.page-footer,
+body.dark-mode .public-filter .filters-block,
+body.dark-mode .frosted-card {
+  background: rgba(40, 40, 40, 0.75);
+  color: #e0e0e0;
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+}
+
+body.dark-mode .skeuo-glass {
+  background: linear-gradient(to bottom right, rgba(80, 80, 80, 0.4), rgba(60, 60, 60, 0.2));
+  border-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
 }

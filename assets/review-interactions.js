@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function () {
   document.querySelectorAll('.access-btn').forEach(function(btn) {
     btn.addEventListener('click', function(e) {
       e.preventDefault();
-      document.body.classList.toggle('high-contrast');
+      document.body.classList.toggle('dark-mode');
     });
   });
 
