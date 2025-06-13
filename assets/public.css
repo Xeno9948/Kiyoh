@@ -9860,9 +9860,12 @@ header.public-header .menu-toggle {
 .scroll-flex .reviewlist {
   flex: 0 0 65%;
   order: 1;
-  padding-left: 0;
   margin-top: 0;
-  padding: 2rem;
+  padding: 0 2rem 2rem;
+}
+
+.scroll-flex .reviewlist .review:first-child {
+  margin-top: 0;
 }
 
 .scroll-flex .company-column {
