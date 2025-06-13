@@ -9862,12 +9862,6 @@ header.public-header .menu-toggle {
   padding-left: 0;
   margin-top: 0;
   padding: 2rem;
-  background: rgba(255, 255, 255, 0.25);
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  border-radius: 24px;
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(30px);
-  -webkit-backdrop-filter: blur(30px);
 }
 
 .scroll-flex .company-card {
@@ -10386,8 +10380,8 @@ header.public-header .header-rating .review-count {
 }
 
 .menu-flex .public-filter {
-  flex: 1 1 auto;
-  max-width: none;
+  flex: 0 0 65%;
+  max-width: 65%;
 }
 
 .public-filter .filters-block {
