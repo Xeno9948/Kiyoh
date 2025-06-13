@@ -9868,6 +9868,18 @@ header.public-header .menu-toggle {
   margin-top: 0;
 }
 
+/* ensure consistent layout for review cards */
+.scroll-flex .reviewlist .reviews {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.scroll-flex .reviewlist .review {
+  width: 100%;
+  box-sizing: border-box;
+}
+
 .scroll-flex .company-column {
   flex: 0 0 35%;
   order: 2;
