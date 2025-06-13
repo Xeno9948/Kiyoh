@@ -9861,7 +9861,7 @@ header.public-header .menu-toggle {
   flex: 0 0 65%;
   order: 1;
   margin-top: 0;
-  padding: 0 2rem 2rem;
+  padding: 0 0 2rem;
 }
 
 .scroll-flex .reviewlist .review:first-child {
@@ -9870,9 +9870,7 @@ header.public-header .menu-toggle {
 
 /* ensure consistent layout for review cards */
 .scroll-flex .reviewlist .reviews {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
+  display: block;
 }
 
 .scroll-flex .reviewlist .review {
