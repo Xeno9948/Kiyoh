@@ -457,11 +457,15 @@ html {
   }
 }
 
+:root {
+  --font: Gotham, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
 body,
 p {
   font-size: 1rem;
   font-weight: 300;
-  font-family: Gotham, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-family: var(--font);
 }
 
 body {
@@ -3433,8 +3437,8 @@ review-filters .filters {
 }
 
 .average-rating-number-container {
-  width: 15rem;
-  height: 15rem;
+  width: 13rem;
+  height: 13rem;
   position: relative;
   background: url('kv_shape.png');
   background-size: cover;
@@ -3448,7 +3452,7 @@ review-filters .filters {
   position: absolute;
   font-weight: 500;
   font-family: Gotham, Arial;
-  font-size: 3.2em;
+  font-size: 4rem;
   top: 50%;
   left: 0;
   width: 100%;
@@ -3650,6 +3654,9 @@ review-filters .ui-select {
   margin-bottom: -.3em;
   font-size: .875rem;
   line-height: 1.5rem
+}
+.ratings-per-division ul li {
+  color: #555;
 }
 
 .ratings-per-division ul li .question-wrapper,
@@ -4161,6 +4168,10 @@ table th.full {
   font-family: Gotham, Arial;
   color: #716c6c;
   line-height: 1.3
+}
+
+.review-summary .overall-rating .summary .amount {
+  font-size: 1.1rem;
 }
 
 .review-summary .overall-rating .summary.light {
@@ -9526,6 +9537,7 @@ application-header .divider .wrapper .detail {
 
 .summary-flex .company-summary {
   flex: 0 0 35%;
+  padding-bottom: 0.5rem;
 }
 
 
@@ -10363,8 +10375,16 @@ header.public-header .header-rating .average-rating-number-container > .rating {
 
 header.public-header .header-rating .review-count {
   font-size: 0.9rem;
-  white-space: nowrap;
-  margin: 0 0.5em;
+  white-space: normal;
+  margin: 0.25rem 0 0;
+  display: block;
+  text-align: center;
+}
+
+header.public-header .header-rating {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 @media (max-width: 767px) {
@@ -10372,10 +10392,10 @@ header.public-header .header-rating .review-count {
     margin-left: auto;
     display: flex;
     align-items: center;
-    flex-direction: row-reverse;
+    flex-direction: column;
   }
   header.public-header .header-rating .review-count {
-    text-align: right;
+    text-align: center;
     white-space: normal;
   }
   header.public-header .header-rating .average-rating-number-container {
