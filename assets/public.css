@@ -546,7 +546,7 @@ ul.real-list {
 
 .featured-content {
   position: relative;
-  margin-top: -1rem;
+  margin-top: 1rem;
   margin-bottom: 2rem;
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -9502,6 +9502,7 @@ application-header .divider .wrapper .detail {
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
+  scroll-margin-top: 6rem;
   justify-content: center;
   align-items: stretch;
   gap: 1rem;
@@ -9938,7 +9939,7 @@ header.public-header {
 }
 
 .public-page.reviews header.public-header + .container {
-  margin-top: 4rem;
+  margin-top: 6rem;
 }
 
 header.public-header .search-part {
