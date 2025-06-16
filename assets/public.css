@@ -1913,7 +1913,8 @@ header.public-header>.content {
 
 @media (max-width: 767px) {
   header.public-header > .content {
-    justify-content: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
   }
 }
 
@@ -3728,7 +3729,7 @@ table th.full {
 }
 
 .review {
-  margin: 2em 0;
+  margin: 1.25em 0;
   padding: 1em;
   border-radius: 15px;
   background: rgba(255, 255, 255, 0.6);
@@ -3872,7 +3873,7 @@ table th.full {
 }
 
 .review .meta-data {
-  margin-top: 1.5em;
+  margin-top: 1em;
   font-size: .875rem
 }
 
@@ -10074,10 +10075,11 @@ header.public-header .header-links {
 }
 
 .review-response {
-  display: none;
+  max-height: 6em;
+  overflow: hidden;
 }
 .review-response.visible {
-  display: block;
+  max-height: none;
 }
 
 .response-actions {
@@ -10121,11 +10123,11 @@ header.public-header .header-links {
 
 .response-actions .share-button {
   color: #fff;
-  background: linear-gradient(to bottom right, #ff9a3e, #ff6a00);
+  background: #dd6825;
 }
 
 .response-actions .share-button:hover {
-  background: linear-gradient(to bottom right, #ffa85c, #ff7e23);
+  background: #e27a3b;
 }
 
 .response-actions .share-button .icon-share {
@@ -10179,7 +10181,7 @@ header.public-header .header-links {
 .frosted-card .cta-button {
   display: inline-block;
   color: #fff;
-  background: #f90;
+  background: #dd6825;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 24px;
   padding: 1rem 1.75rem;
@@ -10410,10 +10412,11 @@ header.public-header .header-rating {
 
 @media (max-width: 767px) {
   header.public-header .header-rating {
-    margin-left: auto;
+    margin: 0.25rem auto 0;
     display: flex;
     align-items: center;
     flex-direction: column;
+    width: 100%;
   }
   header.public-header .header-rating .review-count {
     text-align: center;
@@ -10479,6 +10482,9 @@ header.public-header .header-rating {
   text-align: left;
   margin-top: 0;
 }
+.public-filter .js-filter-button {
+  display: none;
+}
 
 .menu-actions {
   display: flex;
@@ -10510,15 +10516,15 @@ header.public-header .header-rating {
 
 .page-share {
   color: #fff;
-  background: linear-gradient(to bottom right, #ff9a3e, #ff6a00);
+  background: #dd6825;
 }
 
 .page-share:hover {
-  background: linear-gradient(to bottom right, #ffa85c, #ff7e23);
+  background: #e27a3b;
 }
 
 .access-btn .fa-wheelchair {
-  color: #ff6a00;
+  color: #dd6825;
 }
 
 .access-btn:active {

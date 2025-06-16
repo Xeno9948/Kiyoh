@@ -72,5 +72,20 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     }
   });
+
+  var applyBtn = document.querySelector('.js-filter-button');
+  if (applyBtn) {
+    document.querySelectorAll('.js-sorting-fields, .js-language-filter, .js-rating-stars .js-star').forEach(function(el) {
+      el.addEventListener('change', function() {
+        applyBtn.click();
+      });
+    });
+  }
+
+  document.querySelectorAll('.contact-actions a[href^="tel:"]').forEach(function(link) {
+    if (!link.getAttribute('href').replace('tel:', '').trim()) {
+      link.style.display = 'none';
+    }
+  });
 });
 
