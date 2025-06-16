@@ -4174,6 +4174,15 @@ table th.full {
   font-size: 1.1rem;
 }
 
+@media (max-width: 767px) {
+  .review-summary .overall-rating,
+  .review-summary .overall-rating .summary,
+  .review-summary .overall-rating .summary .amount {
+    text-align: center;
+    align-items: center;
+  }
+}
+
 .review-summary .overall-rating .summary.light {
   color: #a6a3a3
 }
@@ -9601,8 +9610,8 @@ application-header .divider .wrapper .detail {
 
 /* Square map styling */
 .company-summary .map-square {
-  width: 14em;
-  height: 14em;
+  width: 100%;
+  height: 18em;
   max-width: 100%;
   border-radius: 0.75rem;
   overflow: hidden;
@@ -9615,9 +9624,20 @@ application-header .divider .wrapper .detail {
   border: 0;
 }
 
-/* Styling for the Bedrijfsoverzicht heading */
+.company-summary .osm-link {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .company-summary .map-square {
+    height: 12em;
+    border-radius: 0.5rem;
+  }
+}
+
+/* Styling for the contact heading */
 .company-summary .review-title {
-  font-size: 2rem;
+  font-size: 2.25rem;
   line-height: 2.625rem;
   font-weight: 700;
   margin-bottom: 0.5em;
@@ -10158,8 +10178,8 @@ header.public-header .header-links {
 */
 .frosted-card .cta-button {
   display: inline-block;
-  color: #f90;
-  background: linear-gradient(to bottom right, rgba(255,255,255,0.2), rgba(255,255,255,0.05));
+  color: #fff;
+  background: #f90;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 24px;
   padding: 1rem 1.75rem;
