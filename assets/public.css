@@ -461,8 +461,7 @@ body,
 p {
   font-size: 1rem;
   font-weight: 300;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif
-}
+  font-family: Gotham, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif
 
 body {
   color: #464343;
@@ -3433,8 +3432,8 @@ review-filters .filters {
 }
 
 .average-rating-number-container {
-  width: 15rem;
-  height: 15rem;
+  width: 12rem;
+  height: 12rem;
   position: relative;
   background: url('kv_shape.png');
   background-size: cover;
@@ -3448,7 +3447,7 @@ review-filters .filters {
   position: absolute;
   font-weight: 500;
   font-family: Gotham, Arial;
-  font-size: 3.2em;
+  font-size: 4em;
   top: 50%;
   left: 0;
   width: 100%;
@@ -9588,10 +9587,10 @@ application-header .divider .wrapper .detail {
 
 /* Square map styling */
 .company-summary .map-square {
-  width: 14em;
-  height: 14em;
+  width: 100%;
+  height: 300px;
   max-width: 100%;
-  border-radius: 0.75rem;
+  border-radius: 0;
   overflow: hidden;
   margin: 1.5rem auto 1em;
 }
@@ -9604,7 +9603,7 @@ application-header .divider .wrapper .detail {
 
 /* Styling for the Bedrijfsoverzicht heading */
 .company-summary .review-title {
-  font-size: 2rem;
+  font-size: 2.5rem;
   line-height: 2.625rem;
   font-weight: 700;
   margin-bottom: 0.5em;
@@ -10041,11 +10040,15 @@ header.public-header .header-links {
 }
 
 .review-response {
-  display: none;
-}
-.review-response.visible {
   display: block;
+  max-height: 4em;
+  overflow: hidden;
 }
+
+.review-response.visible {
+  max-height: none;
+}
+
 
 .response-actions {
   display: flex;
@@ -10145,8 +10148,8 @@ header.public-header .header-links {
 */
 .frosted-card .cta-button {
   display: inline-block;
-  color: #f90;
-  background: linear-gradient(to bottom right, rgba(255,255,255,0.2), rgba(255,255,255,0.05));
+  color: #fff;
+  background: #ff8c00;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 24px;
   padding: 1rem 1.75rem;
@@ -10362,9 +10365,11 @@ header.public-header .header-rating .average-rating-number-container > .rating {
 }
 
 header.public-header .header-rating .review-count {
+  display: block;
+  margin-top: 0.25rem;
   font-size: 0.9rem;
   white-space: nowrap;
-  margin: 0 0.5em;
+  margin: 0;
 }
 
 @media (max-width: 767px) {
