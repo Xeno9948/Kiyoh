@@ -3448,6 +3448,10 @@ review-filters .filters {
   /* retain square background */
 }
 
+body.dark-mode .average-rating-number-container {
+  filter: brightness(0.8) contrast(1.2);
+}
+
 .average-rating-number-container>.rating {
   display: block;
   position: absolute;
@@ -9536,6 +9540,10 @@ application-header .divider .wrapper .detail {
   padding: 0 1rem;
   box-sizing: border-box;
   margin-top: -2rem;
+}
+
+body.dark-mode .summary-flex {
+  margin-top: -1rem;
 }
 
 
