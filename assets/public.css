@@ -3470,6 +3470,7 @@ body.dark-mode .average-rating-number-container {
 /* Ensure all numeric ratings use Gotham */
 .rating {
   font-family: var(--font);
+  line-height: 1;
 }
 
 .footer-bottom-col,
