@@ -10099,16 +10099,17 @@ header.public-header .header-links {
 
 .response-actions {
   display: flex;
+  align-items: center;
   justify-content: flex-end;
   gap: 0.5em;
-  margin-top: 0.5em;
+  margin-top: 0.25em;
 }
 
 .response-actions button {
   display: inline-flex;
   align-items: center;
   gap: 0.25em;
-  padding: 0.5em 1em;
+  padding: 0.25em 0.75em;
   font-size: 0.875rem;
   font-weight: 600;
   color: #333;
@@ -10593,16 +10594,16 @@ body.dark-mode .skeuo-glass {
 .review .review-response,
 .review sme-review-options,
 .review .review-response-options {
-  margin-top: 0.5em;
-  padding-top: 0.5em;
+  margin-top: 0.25em;
+  padding-top: 0.25em;
 }
 .review .ratings-per-division {
-  margin-top: 0.5em;
+  margin-top: 0.25em;
 }
 .review > .review-content {
   gap: 0.25rem;
 }
 .review-response-preview {
   font-style: italic;
-  margin-top: 0.5em;
+  margin-top: 0.25em;
 }
