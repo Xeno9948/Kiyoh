@@ -10582,3 +10582,42 @@ body.dark-mode .skeuo-glass {
   border-color: rgba(255, 255, 255, 0.2);
   color: #fff;
 }
+/* === Compact review styles === */
+.review-list .review {
+  margin: 1em 0;
+  padding: 0.75em 1em;
+}
+.review .meta-data,
+.review .moderation-request,
+.review .review-response,
+.review sme-review-options,
+.review .review-response-options {
+  margin-top: 0.75em;
+  padding-top: 0.75em;
+}
+.review .ratings-per-division {
+  margin-top: 1em;
+}
+.review > .review-content {
+  gap: 0.25rem 0.5rem;
+}
+/* === Mobile header layout adjustment === */
+@media (max-width: 767px) {
+  header.public-header > .content {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+  header.public-header .header-rating {
+    flex-direction: row;
+    width: auto;
+    margin: 0;
+  }
+  header.public-header .header-rating .review-count {
+    font-size: 0.75rem;
+    margin-left: 0.5rem;
+  }
+  header.public-header .header-rating .average-rating-number-container {
+    width: 3rem;
+    height: 3rem;
+  }
+}
