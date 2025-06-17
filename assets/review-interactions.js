@@ -97,7 +97,7 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   var mapSquare = document.querySelector('.map-square');
-  if (mapSquare) {
+  if (mapSquare && window.matchMedia('(max-width: 767px)').matches) {
     var iframe = mapSquare.querySelector('iframe');
     var overlay = mapSquare.querySelector('.map-overlay');
     if (iframe && overlay) {
