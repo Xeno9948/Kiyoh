@@ -3418,12 +3418,16 @@ review-filters .filters {
 .rating-number {
   overflow: hidden;
   font-size: 2.5em;
-  position: relative
+  position: relative;
+  line-height: 0;
+  margin-bottom: 0.5rem;
 }
 
 .rating-number svg {
   height: 2em;
-  width: 1.85em
+  width: 1.85em;
+  display: block;
+  margin: 0 auto;
 }
 
 .rating-number span {
@@ -9602,6 +9606,8 @@ body.dark-mode .summary-flex {
   color: #111;
   cursor: pointer;
 }
+.faq summary::marker,
+.faq summary::-webkit-details-marker{display:none;}
 
 .faq summary .toggle {
   font-size: 1.3rem;
