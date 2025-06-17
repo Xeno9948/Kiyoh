@@ -4186,6 +4186,9 @@ table th.full {
     text-align: center;
     align-items: center;
   }
+  .average-rating-number-container {
+    display: none;
+  }
 }
 
 .review-summary .overall-rating .summary.light {
@@ -10438,8 +10441,7 @@ header.public-header .header-rating {
     white-space: normal;
   }
   header.public-header .header-rating .average-rating-number-container {
-    width: 3rem;
-    height: 3rem;
+    display: none;
   }
   header.public-header .header-rating .average-rating-number-container > .rating {
     font-size: 1.25rem;
