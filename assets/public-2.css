@@ -1,0 +1,23 @@
+@import url('public.css');
+
+html, body {
+  font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* Inherit typography for common components */
+.alert,
+.form-control,
+.dropdown-menu,
+.btn,
+.tooltip,
+.popover,
+input,
+textarea,
+select {
+  font: inherit;
+  line-height: inherit;
+}
