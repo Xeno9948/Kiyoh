@@ -1058,7 +1058,7 @@ textarea:disabled {
   display: flex;
   -webkit-box-align: start;
   -ms-flex-align: start;
-  align-items: flex-start;
+  align-items: center;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between
@@ -1121,7 +1121,7 @@ textarea:disabled {
   flex-flow: row wrap;
   -webkit-box-align: start;
   -ms-flex-align: start;
-  align-items: flex-start;
+  align-items: center;
   margin: -.5em
 }
 
@@ -1170,7 +1170,7 @@ textarea:disabled {
   flex-flow: row wrap;
   -webkit-box-align: start;
   -ms-flex-align: start;
-  align-items: flex-start;
+  align-items: center;
   margin: -.5em -1em
 }
 
@@ -3551,6 +3551,7 @@ review-filters .filters-block>ul>li li:not(:last-child) {
 review-filters .filters-block ul {
   display: -webkit-box;
   display: -ms-flexbox;
+  align-items: center;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
@@ -3673,9 +3674,10 @@ review-filters .ui-select {
   -webkit-box-direction: normal;
   -ms-flex-flow: row wrap;
   flex-flow: row wrap;
+.ratings-per-division ul li .question-wrapper.stars-line{flex-direction:column;align-items:flex-start;}
   -webkit-box-align: start;
   -ms-flex-align: start;
-  align-items: flex-start;
+  align-items: center;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between
@@ -3941,12 +3943,12 @@ table th.full {
 }
 
 .review .opinion {
-  white-space: pre-line
+  white-space: normal
 }
 
 .review .moderation-request,
 .review .review-response {
-  white-space: pre-line;
+  white-space: normal;
   border-top: 1px solid #ccc;
   padding-top: 1.5em;
   margin-top: 1.5em
@@ -3958,7 +3960,7 @@ table th.full {
 }
 
 .review .moderation-response {
-  white-space: pre-line;
+  white-space: normal;
   background-color: #ECECEC;
   padding: 1em
 }
@@ -4119,7 +4121,7 @@ table th.full {
     flex-direction: row;
     gap: 2em;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
   }
   .public-page .splitted-view > .company-summary,
   .public-page .splitted-view > .review-summary {
@@ -4176,6 +4178,9 @@ table th.full {
 }
 
 .review-summary .overall-rating .summary .amount {
+  font-size: 1.1rem;
+}
+.review-summary .overall-rating .summary .recommendations {
   font-size: 1.1rem;
 }
 
@@ -4401,7 +4406,7 @@ table.lined-table checkbox.slider {
   display: flex;
   -webkit-box-align: start;
   -ms-flex-align: start;
-  align-items: flex-start;
+  align-items: center;
   -ms-flex-flow: row wrap;
   flex-flow: row wrap
 }
@@ -4805,7 +4810,7 @@ table.lined-table checkbox.slider {
   justify-content: center;
   -webkit-box-align: start;
   -ms-flex-align: start;
-  align-items: flex-start;
+  align-items: center;
   max-width: 111em;
   border: 2px solid #000
 }
@@ -5370,7 +5375,7 @@ table.lined-table checkbox.slider {
   justify-content: center;
   -webkit-box-align: start;
   -ms-flex-align: start;
-  align-items: flex-start;
+  align-items: center;
   max-width: 111em;
   border: 2px solid #000
 }
@@ -5746,7 +5751,7 @@ table.lined-table checkbox.slider {
   justify-content: space-between;
   -webkit-box-align: start;
   -ms-flex-align: start;
-  align-items: flex-start;
+  align-items: center;
   border-top: 1px solid #fff;
   padding: 1.5em 0
 }
@@ -6446,7 +6451,7 @@ html.widget-document body.kv-widget-body.MEDIUM_WIDE .kv-widget .widget-part:nth
   justify-content: flex-start;
   -webkit-box-align: start;
   -ms-flex-align: start;
-  align-items: flex-start;
+  align-items: center;
   -webkit-box-flex: 1;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto
@@ -6507,7 +6512,7 @@ html.widget-document body.kv-widget-body.WIDE .kv-widget .widget-part .review-co
 .public-page .about-review>.about-review-description,
 .public-page .company-details .company-description {
   font-size: .875em;
-  white-space: pre-line;
+  white-space: normal;
   margin: 1em 0
 }
 .about-review summary {
@@ -9665,7 +9670,7 @@ body.dark-mode .summary-flex {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  align-items: flex-start;
+  align-items: center;
 }
 
 /* Buttons row styling */
@@ -9958,6 +9963,10 @@ header.public-header .menu-toggle {
   gap: 1rem;
 }
 
+.company-info h3 {
+  text-align: left;
+  margin: 0;
+}
 @media (max-width: 767px) {
   .scroll-flex {
     flex-direction: column;
@@ -10516,7 +10525,7 @@ header.public-header .header-rating {
   justify-content: center;
   padding: 0;
   border-radius: 50%;
-  font-size: 1.25rem;
+  font-size: 1.75rem;
 }
 
 @media (max-width: 767px) {
@@ -10526,7 +10535,7 @@ header.public-header .header-rating {
   .menu-actions button {
     width: 5rem;
     height: 5rem;
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
 }
 
@@ -10607,3 +10616,5 @@ body.dark-mode .skeuo-glass {
   font-style: italic;
   margin-top: 0.25em;
 }
+.rating.as-stars{margin-left:.5em;}
+.name-city{display:block;margin-top:.2em;}

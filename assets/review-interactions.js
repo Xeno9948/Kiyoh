@@ -1,5 +1,11 @@
 
 document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('.date-span[data-date]').forEach(function(el){
+    var d = new Date(el.dataset.date);
+    if(!isNaN(d)){
+      el.textContent = d.toLocaleDateString('nl-NL',{day:'numeric',month:'long',year:'numeric'});
+    }
+  });
   // ensure action buttons sit inside each review card
   document.querySelectorAll('.response-actions').forEach(function(actions) {
     var review = actions.previousElementSibling;
@@ -25,8 +31,10 @@ document.addEventListener('DOMContentLoaded', function () {
       }
       if (!container) return;
       var response = container.querySelector('.review-response');
+      var preview = container.querySelector('.review-response-preview');
       if (response) {
-        response.classList.toggle('visible');
+        var visible = response.classList.toggle('visible');
+        if (preview) preview.style.display = visible ? 'none' : '';
       }
     });
   });
