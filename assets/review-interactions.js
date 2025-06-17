@@ -95,5 +95,28 @@ document.addEventListener('DOMContentLoaded', function () {
       link.style.display = 'none';
     }
   });
+
+  var mapSquare = document.querySelector('.map-square');
+  if (mapSquare) {
+    var iframe = mapSquare.querySelector('iframe');
+    var overlay = mapSquare.querySelector('.map-overlay');
+    if (iframe && overlay) {
+      var hold;
+      function activate() {
+        overlay.classList.add('hidden');
+        iframe.style.pointerEvents = 'auto';
+      }
+      function startHold() {
+        hold = setTimeout(activate, 600);
+      }
+      function cancelHold() {
+        clearTimeout(hold);
+      }
+      overlay.addEventListener('touchstart', startHold);
+      overlay.addEventListener('mousedown', startHold);
+      overlay.addEventListener('touchend', cancelHold);
+      overlay.addEventListener('mouseup', cancelHold);
+    }
+  }
 });
 
