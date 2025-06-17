@@ -9909,7 +9909,8 @@ header.public-header .menu-toggle {
   gap: 1rem;
   width: 100%;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding-left: 16px;
+  padding-right: 16px;
   box-sizing: border-box;
 }
 
@@ -9974,8 +9975,8 @@ header.public-header .menu-toggle {
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-left: 24px;
+    padding-right: 24px;
   }
 }
 
