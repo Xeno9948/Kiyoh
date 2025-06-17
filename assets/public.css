@@ -10089,7 +10089,7 @@ header.public-header .header-links {
 }
 
 .review-response {
-  max-height: 6em;
+  max-height: 4em;
   overflow: hidden;
 }
 .review-response.visible {
@@ -10584,22 +10584,26 @@ body.dark-mode .skeuo-glass {
 }
 /* === Compact review styles === */
 .review-list .review {
-  margin: 1em 0;
-  padding: 0.75em 1em;
+  margin: 0.5em 0;
+  padding: 0.5em 0.75em;
 }
 .review .meta-data,
 .review .moderation-request,
 .review .review-response,
 .review sme-review-options,
 .review .review-response-options {
-  margin-top: 0.75em;
-  padding-top: 0.75em;
+  margin-top: 0.5em;
+  padding-top: 0.5em;
 }
 .review .ratings-per-division {
-  margin-top: 1em;
+  margin-top: 0.5em;
 }
 .review > .review-content {
-  gap: 0.25rem 0.5rem;
+  gap: 0.25rem;
+}
+.review-response-preview {
+  font-style: italic;
+  margin-top: 0.5em;
 }
 /* === Mobile header layout adjustment === */
 @media (max-width: 767px) {
