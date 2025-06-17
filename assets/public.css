@@ -3429,13 +3429,14 @@ review-filters .filters {
 .rating-number span {
   color: #fff;
   position: absolute;
-  top: 44%;
+  top: 50%;
   left: 0;
   width: 100%;
   text-align: center;
-  margin-top: -.5em;
+  transform: translateY(-50%);
   z-index: 1;
   font-family: var(--font);
+  line-height: 1;
 }
 
 .average-rating-number-container {
@@ -3462,9 +3463,10 @@ body.dark-mode .average-rating-number-container {
   top: 50%;
   left: 0;
   width: 100%;
-  margin: -.55em 0 0 -.04em;
+  transform: translateY(-50%);
   letter-spacing: -.05em;
-  text-align: center
+  text-align: center;
+  line-height: 1;
 }
 
 /* Ensure all numeric ratings use Gotham */
@@ -6223,9 +6225,10 @@ html.widget-document body.kv-widget-body .default-widget-rating-number>.rating {
   top: 50%;
   left: 0;
   width: 100%;
-  margin: -.55em 0 0 -.04em;
+  transform: translateY(-50%);
   letter-spacing: -.05em;
-  text-align: center
+  text-align: center;
+  line-height: 1;
 }
 
 html.widget-document body.kv-widget-body .default-widget-rating-number:before {
@@ -10510,6 +10513,17 @@ header.public-header .header-rating {
 }
 .public-filter .js-filter-button {
   display: none;
+}
+.public-filter .js-clear-button,
+.public-review-filter .js-clear-button,
+review-filters .js-clear-button {
+  background: #ed8c00;
+  color: #fff;
+}
+.public-filter .js-clear-button:hover,
+.public-review-filter .js-clear-button:hover,
+review-filters .js-clear-button:hover {
+  background: #c97700;
 }
 
 .menu-actions {
