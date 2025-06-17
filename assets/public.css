@@ -1913,8 +1913,8 @@ header.public-header>.content {
 
 @media (max-width: 767px) {
   header.public-header > .content {
-    justify-content: center;
-    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-wrap: nowrap;
   }
 }
 
@@ -10426,25 +10426,25 @@ header.public-header .header-rating {
 
 @media (max-width: 767px) {
   header.public-header .header-rating {
-    margin: 0.25rem auto 0;
+    margin: 0;
     display: flex;
     align-items: center;
     flex-direction: column;
-    width: 100%;
+    width: auto;
   }
   header.public-header .header-rating .review-count {
     text-align: center;
     white-space: normal;
   }
   header.public-header .header-rating .average-rating-number-container {
-    width: 3.5rem;
-    height: 3.5rem;
+    width: 3rem;
+    height: 3rem;
   }
   header.public-header .header-rating .average-rating-number-container > .rating {
     font-size: 1.25rem;
   }
   header.public-header .portal-logo img {
-    max-width: 9em;
+    max-width: 7em;
   }
 }
 
@@ -10604,26 +10604,4 @@ body.dark-mode .skeuo-glass {
 .review-response-preview {
   font-style: italic;
   margin-top: 0.5em;
-}
-/* === Mobile header layout adjustment === */
-@media (max-width: 767px) {
-  header.public-header > .content {
-    flex-wrap: nowrap;
-    justify-content: space-between;
-  }
-  header.public-header .header-rating {
-    flex-direction: column;
-    width: auto;
-    margin: 0;
-  }
-  header.public-header .header-rating .review-count {
-    font-size: 0.75rem;
-    margin-left: 0;
-    margin-top: 0.25rem;
-    text-align: center;
-  }
-  header.public-header .header-rating .average-rating-number-container {
-    width: 3rem;
-    height: 3rem;
-  }
 }
