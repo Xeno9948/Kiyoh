@@ -6,6 +6,13 @@ document.addEventListener('DOMContentLoaded', function () {
       el.textContent = d.toLocaleDateString('nl-NL',{day:'numeric',month:'long',year:'numeric'});
     }
   });
+  document.querySelectorAll('.review-response-preview').forEach(function(p){
+    var txt = p.textContent.trim();
+    var m = txt.match(/^(.+?\.)\s*\1(.*)$/);
+    if(m){
+      p.textContent = m[1] + m[2];
+    }
+  });
   // ensure action buttons sit inside each review card
   document.querySelectorAll('.response-actions').forEach(function(actions) {
     var review = actions.previousElementSibling;
