@@ -1866,6 +1866,16 @@ label.checkbox input:disabled+.selector {
   -webkit-backdrop-filter: blur(8px);
 }
 
+@media (max-width: 767px) {
+  .public-page:not(.location-group) header.public-header {
+    padding-top: 0.5em;
+    padding-bottom: 0.25em;
+  }
+  header.public-header .portal-logo img {
+    max-height: 3em;
+  }
+}
+
 .public-page:not(.location-group) header.public-header>.content {
   border-bottom: none;
   padding-bottom: .5em
@@ -3433,11 +3443,9 @@ review-filters .filters {
 .rating-number span {
   color: #fff;
   position: absolute;
-  top: 45%;
-  left: 0;
-  width: 100%;
-  text-align: center;
-  transform: translateY(-50%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   z-index: 1;
   font-family: var(--font);
   font-weight: 700;
@@ -3754,8 +3762,8 @@ table th.full {
 }
 
 .review {
-  margin: 1.25em 0;
-  padding: 1em;
+  margin: 1em 0;
+  padding: 0.75em;
   border-radius: 15px;
   background: rgba(255, 255, 255, 0.6);
   border: 1px solid rgba(200, 200, 200, 0.3);
@@ -3918,6 +3926,12 @@ table th.full {
 
 .review .meta-data .more-meta-data table td:first-child {
   padding-right: .25em
+}
+
+@media (max-width: 600px) {
+  .review .meta-data .more-meta-data table {
+    margin-left: 1rem;
+  }
 }
 
 @media (max-width:600px) {
@@ -4165,8 +4179,8 @@ table th.full {
   -ms-flex-align: center;
   align-items: center;
   text-align: center;
-  margin-bottom: 1em;
-  padding: 1em;
+  margin-bottom: 0.5em;
+  padding: 0.75em;
   -webkit-box-flex: 0;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto
@@ -4224,7 +4238,7 @@ table th.full {
   -webkit-box-flex: 1;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
-  padding: 1em
+  padding: 0.75em 1em
 }
 
 .public-login-page .page-container,
@@ -5813,8 +5827,8 @@ table.lined-table checkbox.slider {
 }
 
 .review-list .review {
-  margin: 2em 0;
-  padding: 1.5em;
+  margin: 1em 0;
+  padding: 0.75em;
   border-radius: 15px;
   background: rgba(255, 255, 255, 0.6);
   border: 1px solid rgba(200, 200, 200, 0.3);
