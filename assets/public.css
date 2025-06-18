@@ -10703,10 +10703,14 @@ review-filters .js-clear-button:hover {
   text-decoration: none;
   gap: 0.25rem;
 }
+.menu-actions .desc-btn .fa {
+  font-size: 1.25rem;
+}
 .menu-actions .desc-btn .desc-text {
   font-size: 0.9rem;
   margin-left: 0.5rem;
   color: #000;
+  font-weight: 600;
 }
 
 /* toned-down buttons for the menu bar */
@@ -10747,9 +10751,12 @@ review-filters .js-clear-button:hover {
 }
 
 
+.menu-actions .page-share {
+  background: #dd6825;
+}
+
 .page-share {
   color: #fff;
-  background: #dd6825;
 }
 
 .page-share:hover {
