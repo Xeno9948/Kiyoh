@@ -1872,10 +1872,10 @@ label.checkbox input:disabled+.selector {
     padding-bottom: 0.25em;
   }
   header.public-header .portal-logo img {
-    max-height: 3em;
+    max-height: 3.5em;
   }
   header.public-header .sme-logo img {
-    max-height: 2.5em;
+    max-height: 2em;
   }
 }
 
@@ -3934,6 +3934,12 @@ table th.full {
 
 @media (max-width: 600px) {
   .review .meta-data .more-meta-data table {
+    margin-left: 0;
+  }
+  .review .meta-data .more-meta-data.spaced {
+    margin-left: 0;
+  }
+  .review .meta-data .more-meta-data.spaced > * {
     margin-left: 0;
   }
 }
@@ -10145,6 +10151,7 @@ header.public-header .header-links {
 /* Review grid layout */
 .review > .review-content {
   display: grid;
+  align-items: center;
   grid-template-columns: auto 1fr;
   grid-template-areas:
     "num stars"
