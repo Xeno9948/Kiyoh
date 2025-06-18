@@ -1872,7 +1872,7 @@ label.checkbox input:disabled+.selector {
     padding-bottom: 0.25em;
   }
   header.public-header .portal-logo img {
-    max-height: 3em;
+    max-height: 2.5em;
   }
 }
 
@@ -3445,7 +3445,7 @@ review-filters .filters {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -55%);
   z-index: 1;
   font-family: var(--font);
   font-weight: 700;
@@ -9640,9 +9640,14 @@ body.dark-mode .summary-flex {
   line-height: 1;
   display: inline-block;
   margin-left: 0.5rem;
-  font-family: FontAwesome;
 }
-.faq details[open] summary .toggle {
+.faq summary .toggle::before {
+  font-family: FontAwesome;
+  content: "\f078";
+  display: inline-block;
+  transition: transform 0.2s;
+}
+.faq details[open] summary .toggle::before {
   transform: rotate(180deg);
 }
 
@@ -10535,6 +10540,7 @@ header.public-header .header-rating {
   }
   header.public-header .portal-logo img {
     max-width: 7em;
+    max-height: 2.5em;
   }
 }
 
