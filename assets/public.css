@@ -4286,6 +4286,7 @@ table th.full {
     margin-right: auto;
     text-align: center;
     width: 100%;
+    font-size: 0.9rem;
   }
 }
 
