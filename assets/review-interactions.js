@@ -7,10 +7,16 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
   document.querySelectorAll('.review-response-preview').forEach(function(p){
-    var txt = p.textContent.trim();
-    var m = txt.match(/^([\s\S]+?\.)\s*\1([\s\S]*)$/);
-    if(m){
-      p.textContent = m[1] + m[2];
+    var container = p.closest('.meta-data') || p.parentElement;
+    if(!container) return;
+    var resp = container.querySelector('.review-response p');
+    if(!resp) return;
+    var full = resp.textContent.trim();
+    var m = full.match(/^[^.!?]*[.!?]/);
+    var first = m ? m[0].trim() : full;
+    p.textContent = first;
+    if(full.startsWith(first)){
+      resp.textContent = full.slice(first.length).trim();
     }
   });
   // ensure action buttons sit inside each review card

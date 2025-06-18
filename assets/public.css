@@ -1871,11 +1871,9 @@ label.checkbox input:disabled+.selector {
     padding-top: 0.5em;
     padding-bottom: 0.25em;
   }
-  header.public-header .portal-logo img {
-    max-height: 4.5em;
-  }
+  header.public-header .portal-logo img,
   header.public-header .sme-logo img {
-    max-height: 1.5em;
+    max-height: 3em;
   }
 }
 
@@ -3920,7 +3918,8 @@ table th.full {
 }
 
 .review .meta-data .more-meta-data table {
-  line-height: 1.25rem
+  line-height: 1.25rem;
+  border-spacing: 0;
 }
 
 .review .meta-data .more-meta-data table td:last-child:before {
@@ -3929,7 +3928,8 @@ table th.full {
 }
 
 .review .meta-data .more-meta-data table td:first-child {
-  padding-right: .25em
+  padding-right: .25em;
+  padding-left: 0;
 }
 
 @media (max-width: 600px) {
@@ -10554,9 +10554,10 @@ header.public-header .header-rating {
   header.public-header .header-rating .average-rating-number-container > .rating {
     font-size: 1.25rem;
   }
-  header.public-header .portal-logo img {
+  header.public-header .portal-logo img,
+  header.public-header .sme-logo img {
     max-width: 7em;
-    max-height: 2.5em;
+    max-height: 3em;
   }
 }
 
