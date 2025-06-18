@@ -10699,12 +10699,14 @@ review-filters .js-clear-button:hover {
   justify-content: center;
   border-radius: 50%;
   font-size: 1.75rem;
+  color: #000;
   text-decoration: none;
   gap: 0.25rem;
 }
 .menu-actions .desc-btn .desc-text {
   font-size: 0.9rem;
   margin-left: 0.5rem;
+  color: #000;
 }
 
 /* toned-down buttons for the menu bar */
@@ -10737,8 +10739,9 @@ review-filters .js-clear-button:hover {
   }
 }
 
+
 .page-share {
-  color: #fff;
+  color: #000;
   background: #dd6825;
 }
 
@@ -10746,7 +10749,7 @@ review-filters .js-clear-button:hover {
   background: #e27a3b;
 }
 
-.access-btn .fa-wheelchair {
+.access-btn .fa-eye {
   color: #dd6825;
 }
 
