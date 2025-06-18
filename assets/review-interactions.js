@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
   });
   document.querySelectorAll('.review-response-preview').forEach(function(p){
     var txt = p.textContent.trim();
-    var m = txt.match(/^(.+?\.)\s*\1(.*)$/);
+    var m = txt.match(/^([\s\S]+?\.)\s*\1([\s\S]*)$/);
     if(m){
       p.textContent = m[1] + m[2];
     }
