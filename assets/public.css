@@ -10667,18 +10667,7 @@ review-filters .js-clear-button:hover {
 }
 
 .menu-actions {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 0.5rem;
-  background: rgba(255, 255, 255, 0.4);
-  backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(15px);
-  border-radius: 30px;
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  width: max-content;
+  display: none;
 }
 
 .menu-actions button {
@@ -10713,32 +10702,47 @@ review-filters .js-clear-button:hover {
   font-weight: 600;
 }
 
-/* toned-down buttons for the menu bar */
+/* mobile menu button styling */
 .menu-actions .skeuo-glass {
-  box-shadow: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
   background: rgba(255, 255, 255, 0.25);
   border: 1px solid rgba(255, 255, 255, 0.55);
-}
-.menu-actions .fa {
-  color: #000;
-  font-weight: 900;
 }
 .page-share .fa {
   color: #fff;
 }
 .menu-actions .skeuo-glass:hover {
-  background: rgba(255, 255, 255, 0.4);
-  transform: none;
-  box-shadow: none;
+  background: rgba(255, 255, 255, 0.5);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
 }
 
 @media (max-width: 767px) {
   .menu-flex { flex-direction: column; }
-  .menu-actions { order: -1; margin: 0 0 1rem; width: 100%; justify-content: space-around; gap: 1rem; }
+  .menu-actions {
+    display: flex;
+    order: -1;
+    margin: 1rem 0;
+    width: 100%;
+    justify-content: space-around;
+    gap: 1rem;
+    padding: 0.5rem;
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-radius: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  }
+  .menu-actions .fa {
+    color: #000;
+    font-weight: 900;
+  }
   .menu-actions button {
     width: 4rem;
     height: 4rem;
     font-size: 1.75rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
   }
   .menu-actions .desc-btn{
     display: flex;
@@ -10764,7 +10768,7 @@ review-filters .js-clear-button:hover {
 }
 
 .access-btn .fa-eye {
-  color: #000;
+  color: #dd6825;
 }
 
 .access-btn:active {
