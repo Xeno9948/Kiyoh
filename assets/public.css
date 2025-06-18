@@ -9636,18 +9636,14 @@ body.dark-mode .summary-flex {
 .faq summary::-webkit-details-marker{display:none;}
 
 .faq summary .toggle {
+  font-family: FontAwesome;
   font-size: 1.3rem;
   line-height: 1;
   display: inline-block;
   margin-left: 0.5rem;
-}
-.faq summary .toggle::before {
-  font-family: FontAwesome;
-  content: "\f078";
-  display: inline-block;
   transition: transform 0.2s;
 }
-.faq details[open] summary .toggle::before {
+.faq details[open] summary .toggle {
   transform: rotate(180deg);
 }
 
