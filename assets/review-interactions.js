@@ -131,5 +131,18 @@ document.addEventListener('DOMContentLoaded', function () {
       overlay.addEventListener('mouseup', cancelHold);
     }
   }
+
+  var scrollBtn = document.querySelector('.scroll-top');
+  if (scrollBtn) {
+    function toggleScroll() {
+      if (window.scrollY > 200) scrollBtn.classList.add('visible');
+      else scrollBtn.classList.remove('visible');
+    }
+    toggleScroll();
+    window.addEventListener('scroll', toggleScroll);
+    scrollBtn.addEventListener('click', function(){
+      window.scrollTo({top:0, behavior:'smooth'});
+    });
+  }
 });
 
