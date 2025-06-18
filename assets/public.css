@@ -10691,7 +10691,7 @@ review-filters .js-clear-button:hover {
   border-radius: 50%;
   font-size: 1.75rem;
 }
-.menu-actions .desc-btn{
+.menu-actions .desc-btn {
   width: 4rem;
   height: 4rem;
   display: none;
@@ -10702,9 +10702,21 @@ review-filters .js-clear-button:hover {
   text-decoration: none;
   gap: 0.25rem;
 }
-.menu-actions .desc-btn .desc-text{
+.menu-actions .desc-btn .desc-text {
   font-size: 0.9rem;
   margin-left: 0.5rem;
+}
+
+/* toned-down buttons for the menu bar */
+.menu-actions .skeuo-glass {
+  box-shadow: none;
+  background: rgba(255, 255, 255, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.55);
+}
+.menu-actions .skeuo-glass:hover {
+  background: rgba(255, 255, 255, 0.4);
+  transform: none;
+  box-shadow: none;
 }
 
 @media (max-width: 767px) {
@@ -10753,8 +10765,11 @@ review-filters .js-clear-button:hover {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   z-index: 1000;
+}
+.scroll-top .fa {
+  color: #333;
 }
 .scroll-top.visible {
   display: flex;
