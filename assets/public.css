@@ -3937,10 +3937,10 @@ table th.full {
     margin-left: 0;
   }
   .review .meta-data .more-meta-data.spaced {
-    margin-left: 0;
+    margin: 0;
   }
   .review .meta-data .more-meta-data.spaced > * {
-    margin-left: 0;
+    margin: 0;
   }
 }
 
@@ -9649,6 +9649,7 @@ body.dark-mode .summary-flex {
   margin-left: 0.5rem;
   font-size: 1.3rem;
   line-height: 1;
+  transform-origin: center;
   transition: transform 0.2s;
 }
 .faq summary .toggle::before {
