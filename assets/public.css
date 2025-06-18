@@ -3427,10 +3427,10 @@ review-filters .filters {
 
 .rating-number {
   overflow: hidden;
-  font-size: 2.5em;
+  font-size: 2em;
   position: relative;
   line-height: 0;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .rating-number svg {
@@ -3445,11 +3445,12 @@ review-filters .filters {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -55%);
   z-index: 1;
   font-family: var(--font);
   font-weight: 700;
   line-height: 1;
+  white-space: nowrap;
 }
 
 .average-rating-number-container {
@@ -9819,7 +9820,7 @@ body.dark-mode .summary-flex {
 }
 
 .review > .review-content > .left {
-  margin-right: 2em;
+  margin-right: 2.5em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -9838,7 +9839,10 @@ body.dark-mode .summary-flex {
   flex: 0 0 auto;
 }
 
-.review > .review-content > .left > .overall-rating-stars { display: none; }
+.review > .review-content > .left > .overall-rating-stars {
+  display: none;
+  margin-top: 0.5rem;
+}
 
 @media only screen and (max-width:1023px) {
   .review > .review-content {
@@ -10139,7 +10143,7 @@ header.public-header .header-links {
     "num stars"
     "text text"
     "extra extra";
-  gap: 0.5rem 1rem;
+  gap: 0.5rem 2rem;
 }
 
 .review > .review-content > .left,
@@ -10600,6 +10604,8 @@ review-filters .js-clear-button:hover {
   display: flex;
   gap: 1rem;
   justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .menu-actions button {
