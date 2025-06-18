@@ -12,10 +12,11 @@ document.addEventListener('DOMContentLoaded', function () {
     var resp = container.querySelector('.review-response p');
     if(!resp) return;
     var full = resp.textContent.trim();
-    var m = full.match(/^([^.!?]*[.!?])\s*(.*)$/s);
-    var first = m ? m[1].trim() : full;
-    var rest = m ? m[2].trim() : '';
-    p.textContent = 'Reactie van het bedrijf: ' + first;
+    var sentences = full.split(/(?<=[.!?])\s+/);
+    var first = sentences.shift() || '';
+    var rest = sentences.join(' ').trim();
+    if(rest.startsWith(first)) rest = rest.slice(first.length).trim();
+    p.textContent = 'Reactie van het bedrijf: ' + first.trim();
     if(rest) resp.textContent = rest; else resp.parentElement.style.display = 'none';
   });
   // ensure action buttons sit inside each review card

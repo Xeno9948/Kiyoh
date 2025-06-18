@@ -10851,7 +10851,8 @@ body.dark-mode .skeuo-glass {
   gap: 0.5rem 4rem;
 }
 @media (min-width: 1024px) {
-  .review > .review-content { gap: 0.5rem 6rem; }
+  /* keep stars closer to the rating balloon on large screens */
+  .review > .review-content { gap: 0.5rem 2rem; }
 }
 @media (max-width: 600px) {
   .review > .review-content > .left {
