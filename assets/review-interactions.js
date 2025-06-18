@@ -109,6 +109,14 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
+  document.querySelectorAll('.desc-btn[data-target]').forEach(function(btn){
+    btn.addEventListener('click', function(e){
+      e.preventDefault();
+      var target = document.querySelector(btn.dataset.target);
+      if (target) target.scrollIntoView({behavior:'smooth'});
+    });
+  });
+
   var mapSquare = document.querySelector('.map-square');
   if (mapSquare && window.matchMedia('(max-width: 767px)').matches) {
     var iframe = mapSquare.querySelector('iframe');
