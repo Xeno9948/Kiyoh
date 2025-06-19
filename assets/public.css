@@ -9607,11 +9607,13 @@ application-header .divider .wrapper .detail {
   gap: 1rem;
   padding: 0 1rem;
   box-sizing: border-box;
-  margin-top: -2rem;
+  margin-top: -3rem;
+  margin-bottom: 6rem;
 }
 
 body.dark-mode .summary-flex {
-  margin-top: -1rem;
+  margin-top: -2rem;
+  margin-bottom: 6rem;
 }
 
 
@@ -9696,7 +9698,8 @@ body.dark-mode .summary-flex {
   .summary-flex {
     flex-direction: column;
     width: 100%;
-    margin-top: -3rem;
+    margin-top: -4rem;
+    margin-bottom: 6rem;
   }
 
   .summary-flex .review-summary,
@@ -10802,11 +10805,16 @@ body.dark-mode .skeuo-glass {
   margin: 0 auto;
 }
 
+.menu-actions .top-row,
 .menu-actions .button-row {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
+}
+
+.menu-actions .top-row .menu-button {
+  flex: 1;
 }
 
 .menu-button {
@@ -10857,7 +10865,7 @@ body.dark-mode .skeuo-glass {
 }
 
 .menu-actions .desc-btn {
-  width: 100%;
+  flex: 1;
   text-align: center;
   color: #000;
 }

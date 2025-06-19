@@ -306,7 +306,7 @@
       </div>
       <div class="company-summary frosted-card">
         <div>
-          <div class="map-square">
+          <div id="map" class="map-square">
             <iframe
               class="openstreetmap"
               src="https://www.openstreetmap.org/export/embed.html?bbox=5.1105,51.5535,5.1205,51.5635&layer=mapnik&marker=51.5585,5.1155"
@@ -412,10 +412,18 @@
       </div>
     </div>
     <div class="menu-actions">
-      <button type="button" class="desc-btn menu-button" data-target="#company-card" aria-label="Bedrijfs-overzicht">
-        <span class="menu-icon fa fa-book" aria-hidden="true"></span>
-        <span class="desc-text">bedrijfs-overzicht</span>
-      </button>
+      <div class="top-row">
+        <button type="button" class="desc-btn menu-button" data-target="#company-card" aria-label="Bedrijfs-overzicht">
+          <span class="menu-icon fa fa-book" aria-hidden="true"></span>
+          <span class="desc-text">bedrijfs-overzicht</span>
+        </button>
+        <a href="#map" class="menu-button map-btn" aria-label="Kaart">
+          <span class="menu-icon fa fa-map-marker" aria-hidden="true"></span>
+        </a>
+        <a href="#reviews" class="menu-button review-btn" aria-label="Reviews">
+          <span class="menu-icon fa fa-list-alt" aria-hidden="true"></span>
+        </a>
+      </div>
       <div class="button-row">
         <button class="page-share menu-button" aria-label="Deel reviewpagina">
           <span class="menu-icon fa fa-share-alt" aria-hidden="true"></span>
@@ -511,7 +519,7 @@
         </div>
       </div>
     </div>
-    <div class="reviewlist">
+    <div id="reviews" class="reviewlist">
         <div class="reviews">
             <div bis_skin_checked="1" class="review frosted-card">
               <div bis_skin_checked="1" class="review-content">
