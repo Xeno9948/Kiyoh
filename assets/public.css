@@ -9696,6 +9696,7 @@ body.dark-mode .summary-flex {
   .summary-flex {
     flex-direction: column;
     width: 100%;
+    margin-top: -3rem;
   }
 
   .summary-flex .review-summary,
