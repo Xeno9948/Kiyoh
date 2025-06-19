@@ -10813,7 +10813,13 @@ body.dark-mode .skeuo-glass {
   gap: 1rem;
 }
 
+.menu-actions .top-row {
+  flex-wrap: nowrap;
+}
 .menu-actions .top-row .menu-button {
+  flex: none;
+}
+.menu-actions .top-row .desc-btn {
   flex: 1;
 }
 
@@ -10862,10 +10868,18 @@ body.dark-mode .skeuo-glass {
   display: block;
   line-height: 1.2;
   color: #000;
+  white-space: nowrap;
 }
 
 .menu-actions .desc-btn {
   flex: 1;
   text-align: center;
   color: #000;
+}
+
+.review-btn .menu-icon {
+  margin-right: 2px;
+}
+.review-btn .menu-icon:last-child {
+  margin-right: 0;
 }
