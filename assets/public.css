@@ -10787,8 +10787,8 @@ body.dark-mode .skeuo-glass {
   right: 1rem;
   z-index: 1000;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: stretch;
   gap: 1rem;
   padding: 12px 20px;
   background: rgba(255, 255, 255, 0.25);
@@ -10799,6 +10799,13 @@ body.dark-mode .skeuo-glass {
   border: 1px solid rgba(255, 255, 255, 0.4);
   max-width: calc(100% - 2rem);
   margin: 0 auto;
+}
+
+.menu-actions .button-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
 }
 
 .menu-button {
@@ -10844,4 +10851,9 @@ body.dark-mode .skeuo-glass {
 .desc-text {
   display: block;
   line-height: 1.2;
+}
+
+.menu-actions .desc-btn {
+  width: 100%;
+  text-align: center;
 }
