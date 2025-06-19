@@ -7,11 +7,17 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
   document.querySelectorAll('.review-response-preview').forEach(function(p){
-    var txt = p.textContent.trim();
-    var m = txt.match(/^(.+?\.)\s*\1(.*)$/);
-    if(m){
-      p.textContent = m[1] + m[2];
-    }
+    var container = p.closest('.meta-data') || p.parentElement;
+    if(!container) return;
+    var resp = container.querySelector('.review-response p');
+    if(!resp) return;
+    var full = resp.textContent.trim();
+    var sentences = full.split(/(?<=[.!?])\s+/);
+    var first = sentences.shift() || '';
+    var rest = sentences.join(' ').trim();
+    if(rest.startsWith(first)) rest = rest.slice(first.length).trim();
+    p.textContent = 'Reactie van het bedrijf: ' + first.trim();
+    if(rest) resp.textContent = rest; else resp.parentElement.style.display = 'none';
   });
   // ensure action buttons sit inside each review card
   document.querySelectorAll('.response-actions').forEach(function(actions) {
@@ -103,6 +109,14 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
+  document.querySelectorAll('.desc-btn[data-target]').forEach(function(btn){
+    btn.addEventListener('click', function(e){
+      e.preventDefault();
+      var target = document.querySelector(btn.dataset.target);
+      if (target) target.scrollIntoView({behavior:'smooth'});
+    });
+  });
+
   var mapSquare = document.querySelector('.map-square');
   if (mapSquare && window.matchMedia('(max-width: 767px)').matches) {
     var iframe = mapSquare.querySelector('iframe');
@@ -124,6 +138,19 @@ document.addEventListener('DOMContentLoaded', function () {
       overlay.addEventListener('touchend', cancelHold);
       overlay.addEventListener('mouseup', cancelHold);
     }
+  }
+
+  var scrollBtn = document.querySelector('.scroll-top');
+  if (scrollBtn) {
+    function toggleScroll() {
+      if (window.scrollY > 200) scrollBtn.classList.add('visible');
+      else scrollBtn.classList.remove('visible');
+    }
+    toggleScroll();
+    window.addEventListener('scroll', toggleScroll);
+    scrollBtn.addEventListener('click', function(){
+      window.scrollTo({top:0, behavior:'smooth'});
+    });
   }
 });
 
