@@ -10690,17 +10690,10 @@ review-filters .js-clear-button:hover {
 }
 
 .scroll-top {
-  position: fixed;
-  bottom: 1rem;
-  right: 1rem;
-  width: 3rem;
-  height: 3rem;
   display: none;
   align-items: center;
   justify-content: center;
-  border-radius: 50%;
   font-size: 1.8rem;
-  z-index: 1000;
 }
 .scroll-top .fa {
   color: #333;
@@ -10790,8 +10783,8 @@ body.dark-mode .skeuo-glass {
 .menu-actions {
   position: fixed;
   bottom: 1rem;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 1rem;
+  right: 1rem;
   z-index: 1000;
   display: flex;
   align-items: center;
@@ -10804,9 +10797,8 @@ body.dark-mode .skeuo-glass {
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid rgba(255, 255, 255, 0.4);
-  width: fit-content;
-  max-width: 100%;
-  margin: auto;
+  max-width: calc(100% - 2rem);
+  margin: 0 auto;
 }
 
 .menu-button {
@@ -10847,4 +10839,9 @@ body.dark-mode .skeuo-glass {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+}
+
+.desc-text {
+  display: block;
+  line-height: 1.2;
 }
