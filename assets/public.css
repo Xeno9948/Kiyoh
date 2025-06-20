@@ -10621,6 +10621,7 @@ header.public-header .header-rating {
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
+  flex-direction: row;
 }
 
 .menu-flex .public-filter {
@@ -10714,6 +10715,9 @@ review-filters .js-clear-button:hover {
 }
 @media (min-width: 768px) {
   .scroll-top { display: none !important; }
+  .menu-flex {
+    flex-direction: row;
+  }
 }
 
 @media (max-width: 767px) {
@@ -10723,6 +10727,9 @@ review-filters .js-clear-button:hover {
   .menu-flex .public-filter {
     flex-basis: 100%;
     max-width: 100%;
+  }
+  .menu-flex {
+    flex-direction: column;
   }
 }
 
@@ -10817,7 +10824,7 @@ body.dark-mode .skeuo-glass {
   .menu-flex .menu-actions {
     width: 100%;
     max-width: 100%;
-    margin: 0 auto;
+    margin: 0 auto 1rem;
   }
 }
 
