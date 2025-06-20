@@ -10673,7 +10673,7 @@ review-filters .js-clear-button:hover {
 
 
 
-.menu-actions .page-share {
+.menu-container .page-share {
   background: #dd6825;
 }
 
@@ -10798,7 +10798,11 @@ body.dark-mode .skeuo-glass {
 .name-city{display:block;margin-top:.2em;}
 
 /* Floating menu styled like iOS liquid glass */
-.menu-actions {
+.menu-container {
+  position: fixed;
+  bottom: 1rem;
+  left: 0;
+  right: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -10810,23 +10814,12 @@ body.dark-mode .skeuo-glass {
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid rgba(255, 255, 255, 0.4);
-  width: 100%;
-  max-width: 100%;
+  width: fit-content;
+  max-width: calc(100% - 2rem);
   margin: auto;
+  z-index: 1000;
 }
 
-.menu-flex .menu-actions {
-  flex: 0 0 35%;
-  max-width: 35%;
-}
-
-@media (max-width: 767px) {
-  .menu-flex .menu-actions {
-    width: 100%;
-    max-width: 100%;
-    margin: 0 auto;
-  }
-}
 
 .menu-button {
   display: flex;
@@ -10876,7 +10869,7 @@ body.dark-mode .skeuo-glass {
   white-space: nowrap;
 }
 
-.menu-actions .desc-btn {
+.menu-container .desc-btn {
   flex: 1;
   text-align: center;
   color: #000;
