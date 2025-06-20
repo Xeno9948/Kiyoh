@@ -9608,12 +9608,12 @@ application-header .divider .wrapper .detail {
   padding: 0 1rem;
   box-sizing: border-box;
   margin-top: -3rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 body.dark-mode .summary-flex {
   margin-top: -2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 
@@ -9699,7 +9699,7 @@ body.dark-mode .summary-flex {
     flex-direction: column;
     width: 100%;
     margin-top: -4rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
   }
 
   .summary-flex .review-summary,
@@ -10811,6 +10811,13 @@ body.dark-mode .skeuo-glass {
   max-width: calc(100% - 2rem);
   margin: auto;
   z-index: 1000;
+  transition: transform 0.35s ease, opacity 0.35s ease;
+}
+
+.menu-container.menu-hidden {
+  transform: translateY(100%);
+  opacity: 0;
+  pointer-events: none;
 }
 
 

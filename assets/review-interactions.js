@@ -152,5 +152,28 @@ document.addEventListener('DOMContentLoaded', function () {
       window.scrollTo({top:0, behavior:'smooth'});
     });
   }
+
+  var menuBar = document.querySelector('.menu-container');
+  if (menuBar) {
+    var lastY = window.scrollY;
+
+    function handleMenu() {
+      var y = window.scrollY;
+      if (y > lastY + 5) {
+        menuBar.classList.add('menu-hidden');
+      } else if (y < lastY - 5) {
+        menuBar.classList.remove('menu-hidden');
+      }
+      lastY = y;
+    }
+
+    window.addEventListener('scroll', function () {
+      window.requestAnimationFrame(handleMenu);
+    });
+
+    menuBar.addEventListener('click', function () {
+      menuBar.classList.toggle('menu-hidden');
+    });
+  }
 });
 
