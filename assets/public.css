@@ -10616,7 +10616,7 @@ header.public-header .header-rating {
 
 .menu-flex {
   max-width: 1200px;
-  margin: 0.5rem auto;
+  margin: 1rem auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -10824,7 +10824,7 @@ body.dark-mode .skeuo-glass {
   .menu-flex .menu-actions {
     width: 100%;
     max-width: 100%;
-    margin: 0 auto 1rem;
+    margin: 0 auto;
   }
 }
 
