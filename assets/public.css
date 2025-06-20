@@ -10738,12 +10738,12 @@ review-filters .js-clear-button:hover {
     flex-direction: column;
   }
   .menu-flex .menu-container {
-    flex-basis: 100%;
-    max-width: 100%;
+    flex-basis: auto;
+    max-width: calc(100% - 2rem);
   }
   .menu-container {
-    width: 100%;
-    max-width: 100%;
+    width: fit-content;
+    max-width: calc(100% - 2rem);
   }
 }
 
@@ -10828,7 +10828,7 @@ body.dark-mode .skeuo-glass {
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid rgba(255, 255, 255, 0.4);
-  width: 100%;
+  width: fit-content;
   max-width: calc(100% - 2rem);
   margin: auto;
   z-index: 1000;
@@ -10837,9 +10837,16 @@ body.dark-mode .skeuo-glass {
 }
 
 .menu-container.menu-minimized {
-  transform: translateY(calc(100% - 12px));
-  opacity: 0.6;
+  transform: none;
+  padding: 4px 20px;
+  min-height: 12px;
+  gap: 0;
+  opacity: 0.8;
   cursor: pointer;
+}
+
+.menu-container.menu-minimized .menu-button {
+  display: none;
 }
 
 
