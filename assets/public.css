@@ -9607,11 +9607,13 @@ application-header .divider .wrapper .detail {
   gap: 1rem;
   padding: 0 1rem;
   box-sizing: border-box;
-  margin-top: -2rem;
+  margin-top: -3rem;
+  margin-bottom: 1rem;
 }
 
 body.dark-mode .summary-flex {
-  margin-top: -1rem;
+  margin-top: -2rem;
+  margin-bottom: 1rem;
 }
 
 
@@ -9696,6 +9698,8 @@ body.dark-mode .summary-flex {
   .summary-flex {
     flex-direction: column;
     width: 100%;
+    margin-top: -4rem;
+    margin-bottom: 1rem;
   }
 
   .summary-flex .review-summary,
@@ -10612,11 +10616,12 @@ header.public-header .header-rating {
 
 .menu-flex {
   max-width: 1200px;
-  margin: 0.5rem auto;
+  margin: 0 auto 1rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
+  flex-direction: row;
 }
 
 .menu-flex .public-filter {
@@ -10666,103 +10671,9 @@ review-filters .js-clear-button:hover {
   background: #c97700;
 }
 
-.menu-actions {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.menu-actions button {
-  width: 4rem;
-  height: 4rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0;
-  border-radius: 50%;
-  font-size: 1.75rem;
-}
-.menu-actions .desc-btn {
-  width: 4rem;
-  height: 4rem;
-  display: none;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  font-size: 1.75rem;
-  color: #000;
-  text-decoration: none;
-  gap: 0.25rem;
-}
-.menu-actions .desc-btn .fa {
-  font-size: 1.25rem;
-}
-.menu-actions .desc-btn .desc-text {
-  font-size: 0.9rem;
-  margin-left: 0.5rem;
-  color: #000;
-  font-weight: 600;
-}
-
-/* mobile menu button styling */
-.menu-actions .skeuo-glass {
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-  background: rgba(255, 255, 255, 0.2);
-  border: 1px solid rgba(255, 255, 255, 0.45);
-}
-.page-share .fa {
-  color: #fff;
-}
-.menu-actions .skeuo-glass:hover {
-  background: rgba(255, 255, 255, 0.35);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
-}
-
-@media (max-width: 767px) {
-  .menu-flex { flex-direction: column; }
-  .menu-actions {
-    display: flex;
-    order: -1;
-    margin: 1rem 0;
-    width: 100%;
-    justify-content: space-around;
-    gap: 1rem;
-    padding: 0.5rem;
-    background: rgba(255, 255, 255, 0.3);
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
-    border-radius: 30px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
-  }
-  .menu-actions .fa {
-    color: #000;
-    font-weight: 900;
-  }
-  .menu-actions .page-share .fa {
-    color: #fff;
-  }
-  .menu-actions button {
-    width: 4rem;
-    height: 4rem;
-    font-size: 1.75rem;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-  }
-  .menu-actions .desc-btn{
-    display: flex;
-    font-size: 1rem;
-    height: auto;
-    width: auto;
-    padding: 0.5rem 1rem;
-    border-radius: 24px;
-  }
-}
 
 
-.menu-actions .page-share {
+.menu-container .page-share {
   background: #dd6825;
 }
 
@@ -10784,17 +10695,10 @@ review-filters .js-clear-button:hover {
 }
 
 .scroll-top {
-  position: fixed;
-  bottom: 1rem;
-  right: 1rem;
-  width: 3rem;
-  height: 3rem;
   display: none;
   align-items: center;
   justify-content: center;
-  border-radius: 50%;
   font-size: 1.8rem;
-  z-index: 1000;
 }
 .scroll-top .fa {
   color: #333;
@@ -10804,6 +10708,22 @@ review-filters .js-clear-button:hover {
 }
 @media (min-width: 768px) {
   .scroll-top { display: none !important; }
+  .menu-flex {
+    flex-direction: row;
+  }
+  .menu-flex .menu-container {
+    flex: 0 0 35%;
+    max-width: 35%;
+  }
+  .menu-container {
+    position: static;
+    margin: 0;
+    transform: none;
+    max-width: none;
+    bottom: auto;
+    left: auto;
+    right: auto;
+  }
 }
 
 @media (max-width: 767px) {
@@ -10813,6 +10733,17 @@ review-filters .js-clear-button:hover {
   .menu-flex .public-filter {
     flex-basis: 100%;
     max-width: 100%;
+  }
+  .menu-flex {
+    flex-direction: column;
+  }
+  .menu-flex .menu-container {
+    flex-basis: auto;
+    max-width: calc(100% - 2rem);
+  }
+  .menu-container {
+    width: fit-content;
+    max-width: calc(100% - 2rem);
   }
 }
 
@@ -10879,3 +10810,98 @@ body.dark-mode .skeuo-glass {
 }
 .rating.as-stars{margin-left:.5em;}
 .name-city{display:block;margin-top:.2em;}
+
+/* Floating menu styled like iOS liquid glass */
+.menu-container {
+  position: fixed;
+  bottom: 1rem;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 12px 20px;
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 24px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  width: fit-content;
+  max-width: calc(100% - 2rem);
+  margin: auto;
+  z-index: 1000;
+  transition: transform 0.35s ease, opacity 0.35s ease;
+  overflow: hidden;
+}
+
+.menu-container.menu-minimized {
+  transform: none;
+  padding: 4px 20px;
+  min-height: 12px;
+  gap: 0;
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.menu-container.menu-minimized .menu-button {
+  display: none;
+}
+
+
+.menu-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 14px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.25);
+  color: #000;
+  font-weight: 500;
+  font-size: 15px;
+  text-transform: none;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  transition: all 0.25s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(8px);
+  cursor: pointer;
+}
+
+.menu-button:hover {
+  background: rgba(255, 255, 255, 0.45);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.menu-button.orange {
+  background: rgba(255, 102, 0, 0.2);
+  color: #ff6600;
+  border: 1px solid rgba(255, 102, 0, 0.3);
+}
+
+.menu-button.orange:hover {
+  background: rgba(255, 102, 0, 0.3);
+}
+
+.menu-icon {
+  margin-right: 6px;
+  font-size: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: inherit;
+}
+
+.desc-text {
+  display: block;
+  line-height: 1.2;
+  color: #000;
+  white-space: nowrap;
+}
+
+.menu-container .desc-btn {
+  flex: 1;
+  text-align: center;
+  color: #000;
+}
+
