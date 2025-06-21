@@ -10865,6 +10865,7 @@ body.dark-mode .skeuo-glass {
   transition: all 0.25s ease;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   backdrop-filter: blur(8px);
+  cursor: pointer;
 }
 
 .menu-button:hover {
