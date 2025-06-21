@@ -152,5 +152,38 @@ document.addEventListener('DOMContentLoaded', function () {
       window.scrollTo({top:0, behavior:'smooth'});
     });
   }
+
+  var menuBar = document.querySelector('.menu-container');
+  if (menuBar) {
+    var lastY = window.scrollY;
+    var mq = window.matchMedia('(max-width: 767px)');
+
+    function handleMenu() {
+      if (!mq.matches) return;
+      var y = window.scrollY;
+      if (y > lastY + 5) {
+        menuBar.classList.add('menu-minimized');
+      } else if (y < lastY - 5) {
+        menuBar.classList.remove('menu-minimized');
+      }
+      lastY = y;
+    }
+
+    function toggleMenu() {
+      if (mq.matches) menuBar.classList.toggle('menu-minimized');
+    }
+
+    function updateState() {
+      if (!mq.matches) {
+        menuBar.classList.remove('menu-minimized');
+      }
+    }
+
+    mq.addEventListener('change', updateState);
+    window.addEventListener('scroll', function () {
+      window.requestAnimationFrame(handleMenu);
+    });
+    menuBar.addEventListener('click', toggleMenu);
+  }
 });
 
